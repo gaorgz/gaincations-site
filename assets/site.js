@@ -10,6 +10,7 @@ const LINKS = {
   FREE:      "#get",                    // Lead magnet form (embedded on free page)
   EMAIL:     "mailto:hello@gaincations.com"
 };
+const SPOTS_LEFT = 10;   // founding spots remaining; edit this number as clients join
 const EMBEDS = {
   APPLY_FORM: "",   // e.g. https://tally.so/embed/XXXX?alignLeft=1&hideTitle=1&transparentBackground=1
   FREE_FORM:  "",   // e.g. https://tally.so/embed/YYYY?alignLeft=1&hideTitle=1&transparentBackground=1
@@ -49,6 +50,9 @@ const EMBEDS = {
     f.src = url; f.loading = "lazy"; f.title = box.getAttribute("data-title") || "Form";
     box.appendChild(f);
   });
+
+  // spots counter
+  document.querySelectorAll("#spots, #spots-es").forEach(e => e.textContent = SPOTS_LEFT);
 
   // mobile menu
   const mb = document.querySelector(".menubtn"), links = document.querySelector(".links");
