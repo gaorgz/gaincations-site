@@ -131,7 +131,7 @@ footer a:hover{color:var(--ink)}
   linear-gradient(90deg,#121212 0%,rgba(18,18,18,.75) 14%,rgba(18,18,18,0) 42%),
   linear-gradient(0deg,#121212 0%,rgba(18,18,18,0) 26%),
   linear-gradient(180deg,rgba(18,18,18,.5) 0%,rgba(18,18,18,0) 22%)}
-.hero-photo h1{max-width:13ch;font-size:clamp(32px,4.6vw,54px)}
+.hero-photo h1{max-width:9ch;font-size:clamp(44px,6.4vw,84px)}
 .hero-photo .lead{max-width:480px}
 .photo-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);aspect-ratio:4/5;max-height:520px}
 .photo-card img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
