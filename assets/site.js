@@ -6,7 +6,7 @@ const LINKS = {
   TIKTOK:    "https://www.tiktok.com/@gaincations",
   APPLY:     "#apply",                  // Tally form (embedded on coaching page)
   CHECKOUT:  "https://buy.stripe.com/7sYeVdeCk2HkaK4dGpgQE00",  // Stripe Payment Link: 1-on-1 Coaching (Founding)
-  CALL:      "https://calendly.com/gaincations/30min",  // Calendly
+  CALL:      "https://calendly.com/gaincations/15min",  // Calendly
   FREE:      "#get",                    // Lead magnet form (embedded on free page)
   EMAIL:     "mailto:gaincations@gmail.com"
 };
