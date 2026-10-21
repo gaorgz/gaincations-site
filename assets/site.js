@@ -5,7 +5,7 @@ const LINKS = {
   INSTAGRAM: "https://www.instagram.com/gaincations",
   TIKTOK:    "https://www.tiktok.com/@gaincations",
   APPLY:     "#apply",                  // Tally form (embedded on coaching page)
-  CHECKOUT:  "#",                       // Stripe Payment Link: skip the call
+  CHECKOUT:  "https://buy.stripe.com/7sYeVdeCk2HkaK4dGpgQE00",  // Stripe Payment Link: 1-on-1 Coaching (Founding)
   CALL:      "#",                       // Calendly link
   FREE:      "#get",                    // Lead magnet form (embedded on free page)
   EMAIL:     "mailto:hello@gaincations.com"
