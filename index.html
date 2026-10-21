@@ -35,16 +35,12 @@
   </div>
 </nav>
 
-<header class="hero">
-  <svg class="sun" viewBox="0 0 420 420" aria-hidden="true">
-    <clipPath id="h"><rect x="0" y="0" width="420" height="250"/></clipPath>
-    <g clip-path="url(#h)">
-      <circle cx="210" cy="250" r="160" fill="#E8793A"/>
-      <circle cx="210" cy="250" r="110" fill="none" stroke="#121212" stroke-width="8"/>
-      <circle cx="210" cy="250" r="26" fill="#121212"/>
-    </g>
-    <rect x="20" y="246" width="380" height="10" rx="5" fill="#F2EDE4"/>
-  </svg>
+<header class="hero hero-photo">
+  <picture class="hero-img" aria-hidden="true">
+    <source srcset="/assets/img/hero.webp" type="image/webp">
+    <img src="/assets/img/hero.jpg" alt="" loading="eager" fetchpriority="high">
+  </picture>
+  <div class="hero-fade" aria-hidden="true"></div>
   <div class="wrap">
     <div class="eyebrow"><span class="en">Online coaching · Natural</span><span class="es">Coaching online · Natural</span></div>
     <h1>
@@ -56,7 +52,7 @@
       <span class="es">Ya entrenas. Comes “bastante bien.” Y el espejo sigue sin mostrarlo. Eso no es un problema de gym. Así lo arreglamos.</span>
     </p>
     <div class="btnrow">
-      <a class="btn primary" href="/coaching"><span class="en">Apply for coaching</span><span class="es">Aplicar al coaching</span></a>
+      <a class="btn primary" href="/coaching"><span class="en">Start coaching</span><span class="es">Empezar coaching</span></a>
       <a class="btn ghost" href="/free"><span class="en">Get the free guide</span><span class="es">Guía gratis</span></a>
     </div>
   </div>
@@ -115,8 +111,11 @@
       <p class="muted"><span class="en">I've lifted since 18 and got serious about food at 26. No gear, no full-time-athlete schedule. Everything on this site is what I actually do between jobs, in a garage gym, on a normal budget.</span><span class="es">Levanto pesas desde los 18 y me tomé en serio la comida a los 26. Sin sustancias, sin horario de atleta de tiempo completo. Todo lo que hay en este sitio es lo que realmente hago entre trabajos, en un gym de cochera, con un presupuesto normal.</span></p>
       <div class="btnrow"><a class="btn ghost" data-link="YOUTUBE" href="#"><span class="en">Watch the videos</span><span class="es">Ver los videos</span></a></div>
     </div>
-    <div class="placeholder" style="min-height:360px;display:flex;align-items:center;justify-content:center">
-      <span class="en">[Your photo goes here: the garage mirror shot, arms crossed]</span><span class="es">[Tu foto va aquí: la del espejo en la cochera, brazos cruzados]</span>
+    <div class="photo-card">
+      <picture>
+        <source srcset="/assets/img/hero.webp" type="image/webp">
+        <img src="/assets/img/hero.jpg" alt="Cris in his garage gym" loading="lazy">
+      </picture>
     </div>
   </div>
 </section>
