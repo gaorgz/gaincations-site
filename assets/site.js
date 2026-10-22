@@ -25,7 +25,7 @@ const EMBEDS = {
   const apply = () => {
     document.body.classList.toggle("lang-es", lang === "es");
     document.documentElement.lang = lang;
-    document.querySelectorAll(".langbtn").forEach(b => b.textContent = lang === "es" ? "EN" : "ES");
+    document.querySelectorAll(".langbtn").forEach(b => b.textContent = lang === "es" ? (b.closest(".hf-nav") ? "English" : "EN") : (b.closest(".hf-nav") ? "Español" : "ES"));
   };
   apply();
   document.querySelectorAll(".langbtn").forEach(b => b.addEventListener("click", () => {

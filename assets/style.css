@@ -208,3 +208,9 @@ body.lang-es .btn.skew>span.es{display:inline-block}
 .hf-center a{font-family:var(--display);font-weight:400;font-size:17px;letter-spacing:.04em;color:var(--ink);text-decoration:none}
 .hf-center a:hover{text-decoration:underline;text-underline-offset:5px}
 .hf-nav .langbtn,.langbtn{font-family:var(--display);font-weight:400;letter-spacing:.08em;font-size:12px}
+
+/* primary nav link with orange slash */
+.hf-primary{display:inline-flex;align-items:center;gap:9px}
+.hf-primary .slash{display:inline-block;width:14px;height:4px;background:var(--accent);transform:skewX(-30deg);border-radius:1px;transition:width .18s ease}
+.hf-primary:hover .slash{width:22px}
+.hf-nav .langbtn{padding:7px 14px}
