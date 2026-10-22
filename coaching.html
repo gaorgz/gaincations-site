@@ -9,45 +9,60 @@
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/img/favicon-64.png">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/style.css?v=202610220307">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/style.css?v=202610221640">
 </head>
 <body>
 
-<nav class="nav">
-  <div class="wrap">
-    <a class="logo" href="/" aria-label="Gaincations home">
-      <img class="logo-img" src="/assets/img/logo.png" alt="Gaincations" width="44" height="44">
-    </a>
-    <div class="links" id="links">
-      <a href="/coaching"><span class="en">Coaching</span><span class="es">Coaching</span></a>
+<header class="page-top">
+  <nav class="hf-nav" aria-label="Main">
+    <div class="hf-center">
+      <a href="/coaching" class="hf-primary"><span class="slash" aria-hidden="true"></span><span class="en">Coaching</span><span class="es">Coaching</span></a>
       <a href="/programs"><span class="en">Programs</span><span class="es">Programas</span></a>
-      <a href="/free"><span class="en">Free guide</span><span class="es">Guía gratis</span></a>
-      <a href="/gear"><span class="en">Gear</span><span class="es">Equipo</span></a>
       <a data-link="YOUTUBE" href="#">YouTube</a>
     </div>
-    <div class="navright">
-      <button class="langbtn" type="button" aria-label="Switch language">ES</button>
-      <button class="menubtn" type="button" aria-label="Menu" aria-controls="links">☰</button>
+    <div class="hf-right">
+      <button class="langbtn" type="button" aria-label="Switch language">Español</button>
     </div>
+    <button class="hf-menu" type="button" aria-label="Menu" aria-controls="hf-links">☰</button>
+  </nav>
+  <div class="hf-links" id="hf-links">
+    <a href="/coaching"><span class="en">Coaching</span><span class="es">Coaching</span></a>
+    <a href="/programs"><span class="en">Programs</span><span class="es">Programas</span></a>
+    <a href="/free"><span class="en">Free guide</span><span class="es">Guía gratis</span></a>
+    <a href="/gear"><span class="en">Gear</span><span class="es">Equipo</span></a>
+    <a data-link="YOUTUBE" href="#">YouTube</a>
   </div>
-</nav>
-
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow"><span class="en">1-on-1 coaching</span><span class="es">Coaching 1 a 1</span></div>
-    <h1><span class="en">Twelve weeks to a body you can see.</span><span class="es">Doce semanas para un cuerpo que se note.</span></h1>
-    <p class="lead"><span class="en">For people who already train and want the result to finally match the effort. Limited spots so every check-in gets real attention.</span><span class="es">Para gente que ya entrena y quiere que el resultado por fin corresponda al esfuerzo. Cupos limitados para que cada revisión reciba atención real.</span></p>
-    <div class="btnrow">
-      <a class="btn primary" href="#join"><span class="en">Start coaching</span><span class="es">Empezar coaching</span></a>
-      <a class="btn ghost" data-link="CALL" href="#"><span class="en">Not sure? Book a 15-min call</span><span class="es">¿Dudas? Agenda 15 minutos</span></a>
-    </div>
-  </div>
+  <a class="page-mark" href="/" aria-label="Gaincations home"><img src="/assets/img/logo.png" alt="" width="64" height="64"></a>
 </header>
+
+<section class="section dark page-hero">
+  <div class="wrap">
+    <div class="sec-head">
+      <h1 class="h-hero h-caption"><span class="en">Twelve weeks to a body you can see</span><span class="es">Doce semanas para un cuerpo que se note</span></h1>
+      <div class="eyebrow below"><span class="en">1-on-1 coaching</span><span class="es">Coaching 1 a 1</span></div>
+      <p class="sub light"><span class="en">For people who already train and want the result to finally match the effort. Limited spots so every check-in gets real attention.</span><span class="es">Para gente que ya entrena y quiere que el resultado por fin corresponda al esfuerzo. Cupos limitados para que cada revisión reciba atención real.</span></p>
+      <div class="btnrow center">
+        <a class="btn primary skew" href="#join"><span class="en">Start coaching</span><span class="es">Empezar coaching</span></a>
+        <a class="btn ghost ondark skew" data-link="CALL" href="#"><span class="en">Book a 15-min call</span><span class="es">Agenda 15 minutos</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="divider-bar" aria-hidden="true">
+    <svg viewBox="0 0 140 56">
+      <defs><clipPath id="bar-top"><rect x="0" y="0" width="140" height="28"/></clipPath><clipPath id="bar-bot"><rect x="0" y="28" width="140" height="28"/></clipPath></defs>
+      <g fill="#F7F7FF" clip-path="url(#bar-top)"><g><rect x="30" y="23" width="80" height="10" rx="5"/><rect x="30" y="8" width="14" height="40" rx="4"/><rect x="16" y="15" width="12" height="26" rx="4"/><rect x="96" y="8" width="14" height="40" rx="4"/><rect x="112" y="15" width="12" height="26" rx="4"/></g></g>
+      <g fill="#3B4E54" clip-path="url(#bar-bot)"><g><rect x="30" y="23" width="80" height="10" rx="5"/><rect x="30" y="8" width="14" height="40" rx="4"/><rect x="16" y="15" width="12" height="26" rx="4"/><rect x="96" y="8" width="14" height="40" rx="4"/><rect x="112" y="15" width="12" height="26" rx="4"/></g></g>
+    </svg>
+  </div>
+</section>
 
 <section class="section">
   <div class="wrap">
-    <div class="eyebrow"><span class="en">What you get</span><span class="es">Qué incluye</span></div>
+    <div class="sec-head">
+      <h2 class="h-hero h-caption small grey"><span class="en">Everything handled, every week</span><span class="es">Todo resuelto, cada semana</span></h2>
+      <div class="eyebrow below"><span class="en">What you get</span><span class="es">Qué incluye</span></div>
+    </div>
     <div class="grid c2">
       <ul class="checks">
         <li><span class="en"><b>Nutrition built around your week.</b> Targets, simple meals, restaurant orders, what to do on travel days.</span><span class="es"><b>Nutrición armada alrededor de tu semana.</b> Metas, comidas simples, qué pedir en restaurantes, qué hacer en días de viaje.</span></li>
@@ -64,7 +79,7 @@
 </section>
 
 <section class="section">
-  <div class="wrap grid c2">
+  <div class="wrap grid c2 skew-cards">
     <div class="card">
       <h3><span class="en">This is for you if</span><span class="es">Es para ti si</span></h3>
       <ul class="checks">
@@ -86,9 +101,12 @@
 
 <section class="section" id="join">
   <div class="wrap">
-    <div class="eyebrow"><span class="en">Founding rate · <span id="spots">10</span> spots</span><span class="es">Precio de lanzamiento · <span id="spots-es">10</span> cupos</span></div>
+    <div class="sec-head">
+      <h2 class="h-hero h-caption small grey"><span class="en">Founding rate</span><span class="es">Precio de lanzamiento</span></h2>
+      <div class="eyebrow below"><span class="en"><span id="spots">10</span> spots, then $449</span><span class="es"><span id="spots-es">10</span> cupos, después $449</span></div>
+    </div>
     <div class="grid c2" style="align-items:start">
-      <div class="card">
+      <div class="card price-card">
         <div class="price">$349<small> /mo</small></div>
         <h3 style="margin-top:14px"><span class="en">1-on-1 coaching, everything above</span><span class="es">Coaching 1 a 1, todo lo de arriba</span></h3>
         <ul class="checks" style="margin:14px 0 22px">
@@ -96,15 +114,15 @@
           <li><span class="en">Founding rate for the first 10 clients. Your price stays locked as long as you stay.</span><span class="es">Precio de lanzamiento para los primeros 10 clientes. Tu precio queda fijo mientras sigas.</span></li>
           <li><span class="en">Price goes up to $449 when these spots are gone.</span><span class="es">Sube a $449 cuando se acaben estos cupos.</span></li>
         </ul>
-        <a class="btn primary" data-link="CHECKOUT" href="#"><span class="en">Start today · $349/mo</span><span class="es">Empezar hoy · $349/mes</span></a>
-        <p class="muted" style="margin:14px 0 0;font-size:14px"><span class="en">Secure checkout through Stripe. Not sure yet?</span><span class="es">Pago seguro con Stripe. ¿Aún no estás seguro?</span> <a data-link="CALL" href="#"><span class="en">Book a free 15-minute call.</span><span class="es">Agenda una llamada gratis de 15 minutos.</span></a></p>
+        <a class="btn primary skew" data-link="CHECKOUT" href="#"><span class="en">Start today · $349/mo</span><span class="es">Empezar hoy · $349/mes</span></a>
+        <p class="muted" style="margin:16px 0 0;font-size:14px"><span class="en">Secure checkout through Stripe. Not sure yet?</span><span class="es">Pago seguro con Stripe. ¿Aún no estás seguro?</span> <a data-link="CALL" href="#"><span class="en">Book a free 15-minute call.</span><span class="es">Agenda una llamada gratis de 15 minutos.</span></a></p>
       </div>
       <div>
         <h3><span class="en">What happens after you join</span><span class="es">Qué pasa después de unirte</span></h3>
-        <div class="grid" style="gap:14px">
-          <div class="card" style="padding:18px 20px"><div class="num" style="font-size:18px;margin-bottom:4px">01</div><span class="en">You get an email with your app invite and a 5-minute intake: training history, schedule, what you eat on a normal day, goal.</span><span class="es">Recibes un correo con tu invitación a la app y un cuestionario de 5 minutos: historial, horario, qué comes en un día normal, meta.</span></div>
-          <div class="card" style="padding:18px 20px"><div class="num" style="font-size:18px;margin-bottom:4px">02</div><span class="en">Within 48 hours your first week is built: food targets, meals, and your training days, in the app.</span><span class="es">En 48 horas tu primera semana está lista: metas de comida, comidas y tus días de entreno, en la app.</span></div>
-          <div class="card" style="padding:18px 20px"><div class="num" style="font-size:18px;margin-bottom:4px">03</div><span class="en">Every week: photos and weight in, written review and adjustments out. Message me any time in between.</span><span class="es">Cada semana: fotos y peso de tu lado, revisión escrita y ajustes del mío. Me escribes cuando quieras entre semana.</span></div>
+        <div class="grid steps">
+          <div class="card"><span class="en">You get an email with your app invite and a 5-minute intake: training history, schedule, what you eat on a normal day, goal.</span><span class="es">Recibes un correo con tu invitación a la app y un cuestionario de 5 minutos: historial, horario, qué comes en un día normal, meta.</span><div class="num">01</div></div>
+          <div class="card"><span class="en">Within 48 hours your first week is built: food targets, meals, and your training days, in the app.</span><span class="es">En 48 horas tu primera semana está lista: metas de comida, comidas y tus días de entreno, en la app.</span><div class="num">02</div></div>
+          <div class="card"><span class="en">Every week: photos and weight in, written review and adjustments out. Message me any time in between.</span><span class="es">Cada semana: fotos y peso de tu lado, revisión escrita y ajustes del mío. Me escribes cuando quieras entre semana.</span><div class="num">03</div></div>
         </div>
       </div>
     </div>
@@ -113,7 +131,10 @@
 
 <section class="section">
   <div class="wrap">
-    <div class="eyebrow">FAQ</div>
+    <div class="sec-head">
+      <h2 class="h-hero h-caption small grey"><span class="en">Questions</span><span class="es">Preguntas</span></h2>
+      <div class="eyebrow below">FAQ</div>
+    </div>
     <details><summary><span class="en">Why is it $349 and not $99 like an app?</span><span class="es">¿Por qué $349 y no $99 como una app?</span></summary><p><span class="en">Because an app doesn't look at your photos every week and change your plan. You're paying for a person to pay attention, which is the part that was missing. The founding rate exists because you're early; it goes up as spots fill.</span><span class="es">Porque una app no mira tus fotos cada semana ni cambia tu plan. Pagas por una persona que ponga atención, que es la parte que faltaba. El precio de lanzamiento existe porque llegas temprano; sube conforme se llenan los cupos.</span></p></details>
     <details><summary><span class="en">Can I cancel?</span><span class="es">¿Puedo cancelar?</span></summary><p><span class="en">After the first three months, yes, any time, one message. The minimum exists because nothing visible happens in four weeks and I don't want to take your money for that.</span><span class="es">Después de los primeros tres meses, sí, cuando quieras, con un mensaje. El mínimo existe porque en cuatro semanas no pasa nada visible y no quiero cobrarte por eso.</span></p></details>
     <details><summary><span class="en">Do I need a gym?</span><span class="es">¿Necesito un gym?</span></summary><p><span class="en">No. The plan is built for whatever you have: a commercial gym, a garage setup, or a park with a pull-up bar. Tell me in the intake form.</span><span class="es">No. El plan se arma con lo que tengas: gym comercial, cochera, o un parque con barra. Dímelo en el cuestionario.</span></p></details>
@@ -121,6 +142,17 @@
     <details><summary><span class="en">How fast will I see results?</span><span class="es">¿Qué tan rápido veo resultados?</span></summary><p><span class="en">Most people see a visible difference in the mirror by week 6 and a clear one by week 12, if they follow the food. The training is the easy part.</span><span class="es">La mayoría nota diferencia en el espejo para la semana 6 y una clara para la 12, si siguen la comida. El entreno es la parte fácil.</span></p></details>
     <details><summary><span class="en">What app do you use?</span><span class="es">¿Qué app usas?</span></summary><p><span class="en">Trainerize. Workouts, food logging, photos, messaging and check-ins all live there.</span><span class="es">Trainerize. Entrenos, registro de comida, fotos, mensajes y revisiones viven ahí.</span></p></details>
     <details><summary><span class="en">¿Hablas español?</span><span class="es">Do you coach in English too?</span></summary><p><span class="en">Sí. Coaching is available in English or Spanish, your choice.</span><span class="es">Yes. El coaching está disponible en inglés o español, tú eliges.</span></p></details>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2><span class="en">Ten spots. Then the price goes up.</span><span class="es">Diez cupos. Después sube el precio.</span></h2>
+    <p><span class="en">If you've read this far, you already know whether this is you.</span><span class="es">Si llegaste hasta aquí, ya sabes si esto es para ti.</span></p>
+    <div class="btnrow">
+      <a class="btn primary" data-link="CHECKOUT" href="#"><span class="en">Start today · $349/mo</span><span class="es">Empezar hoy · $349/mes</span></a>
+      <a class="btn ghost" data-link="CALL" href="#"><span class="en">Book a 15-min call</span><span class="es">Agenda 15 minutos</span></a>
+    </div>
   </div>
 </section>
 
@@ -135,6 +167,6 @@
   </div>
 </footer>
 <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
-<script src="/assets/site.js?v=202610220307"></script>
+<script src="/assets/site.js?v=202610221640"></script>
 </body>
 </html>
