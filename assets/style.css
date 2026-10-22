@@ -260,3 +260,9 @@ body.lang-es .btn.skew>span.es{display:inline-block}
   .cols3 .col{padding:0}
   .cols3 .col + .col{border-left:0;border-top:1px solid rgba(247,247,255,.18);padding-top:26px}
 }
+
+/* YouTube caption style (Bebas, yellow fill, red outline), one headline only */
+.h-caption{font-family:'Bebas Neue',Impact,sans-serif;font-style:normal;font-weight:400;text-transform:uppercase;letter-spacing:.02em;
+  color:#F0CE47;paint-order:stroke fill;-webkit-text-stroke:5px #C64519;font-size:clamp(40px,5.6vw,72px);line-height:1}
+.section.dark .h-caption{color:#F0CE47}
+@media (max-width:820px){.h-caption{-webkit-text-stroke:3.5px #C64519;font-size:clamp(34px,10vw,48px)}}
