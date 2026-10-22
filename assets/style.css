@@ -210,7 +210,7 @@ body.lang-es .btn.skew>span.es{display:inline-block}
 .hf-nav .langbtn,.langbtn{font-family:var(--display);font-weight:400;letter-spacing:.08em;font-size:12px}
 
 /* primary nav link with orange slash */
-.hf-primary{display:inline-flex;align-items:center;gap:9px}
-.hf-primary .slash{display:inline-block;width:14px;height:4px;background:var(--accent);transform:skewX(-30deg);border-radius:1px;transition:width .18s ease}
-.hf-primary:hover .slash{width:22px}
+.hf-primary{position:relative;display:inline-block;padding-bottom:6px}
+.hf-primary .slash{position:absolute;left:4px;right:4px;bottom:0;height:4px;background:var(--accent);transform:skewX(-30deg);border-radius:1px;transition:left .18s ease,right .18s ease}
+.hf-primary:hover .slash{left:0;right:0}
 .hf-nav .langbtn{padding:7px 14px}
