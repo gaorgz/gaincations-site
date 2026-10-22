@@ -274,3 +274,6 @@ body.lang-es .btn.skew>span.es{display:inline-block}
 .yt-mark{display:inline-block;margin:10px 0 18px;line-height:0}
 .yt-mark svg{display:block}
 .yt-mark:hover svg{filter:brightness(.92)}
+.h-caption.grey{color:var(--ink);-webkit-text-stroke:0;paint-order:normal}
+.sec-logo{display:inline-block;line-height:0;margin-bottom:4px}
+.sec-logo img{width:88px;height:88px;border-radius:20px;display:block}
