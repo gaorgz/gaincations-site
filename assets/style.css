@@ -248,12 +248,12 @@ body.lang-es .btn.skew>span.es{display:inline-block}
 
 .hero-full + .section.dark{padding-top:56px}
 /* dark section */
-.section.dark{background:var(--grey);color:#F7F7FF;padding-bottom:110px;clip-path:polygon(0 0,100% 0,100% calc(100% - 70px),0 100%)}
-@media (max-width:820px){.section.dark{padding-bottom:80px;clip-path:polygon(0 0,100% 0,100% calc(100% - 36px),0 100%)}}
+.section.dark{background:var(--grey);color:#F7F7FF;position:relative;padding-bottom:84px}
+@media (max-width:820px){.section.dark{padding-bottom:64px}}
 .section.dark .h-hero{color:#F7F7FF}
 .section.dark .eyebrow{color:var(--accent)}
 .section + .section.dark, .section.dark + .section{border-top:0}
-.section.dark + .section{padding-top:28px}
+.section.dark + .section{padding-top:84px}
 .cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
 .cols3 .col{padding:8px 32px 4px;text-align:center}
 .cols3 .col + .col{border-left:1px solid rgba(247,247,255,.18)}
@@ -297,3 +297,6 @@ body.lang-es .btn.skew>span.es{display:inline-block}
 .skew-cards .card{display:flex;flex-direction:column}
 .skew-cards .card .num{margin:auto 0 0;padding-top:14px}
 .skew-cards .card p{margin-bottom:0}
+.divider-bar{position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);width:200px;height:56px;line-height:0;pointer-events:none}
+.divider-bar svg{width:100%;height:100%;display:block}
+@media (max-width:820px){.divider-bar{width:150px;height:42px}}
