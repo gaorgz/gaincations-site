@@ -198,3 +198,7 @@ body.lang-es .btn.skew>span.es{display:inline-block}
   .hf-menu{justify-self:end}
   .hf-title{gap:10px}
 }
+
+/* nav in display face */
+.hf-left a,.hf-right a,.hf-links a,.links a{font-family:var(--display);font-weight:400;font-size:14px;letter-spacing:.04em}
+.hf-nav .langbtn,.langbtn{font-family:var(--display);font-weight:400;letter-spacing:.08em;font-size:12px}
