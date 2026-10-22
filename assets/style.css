@@ -280,3 +280,5 @@ body.lang-es .btn.skew>span.es{display:inline-block}
 .sec-head .h-caption.grey,.h-caption.grey{color:var(--ink);-webkit-text-stroke:0 transparent;paint-order:normal;text-shadow:none}
 .sec-logo{display:block;width:88px}
 .yt-mark{display:block;width:34px}
+.yt-btn svg{display:block;flex:none}
+.sec-logo{margin-bottom:14px}
