@@ -57,6 +57,8 @@ const EMBEDS = {
   // mobile menu
   const mb = document.querySelector(".menubtn"), links = document.querySelector(".links");
   if (mb && links) mb.addEventListener("click", () => links.classList.toggle("open"));
+  const hm = document.querySelector(".hf-menu"), hl = document.querySelector(".hf-links");
+  if (hm && hl) hm.addEventListener("click", () => hl.classList.toggle("open"));
 
   // active nav
   const here = location.pathname.replace(/\/$/, "") || "/";
