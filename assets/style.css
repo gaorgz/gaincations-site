@@ -161,13 +161,11 @@ footer a:hover{color:var(--ink)}
 .hf-links{display:none;position:absolute;top:84px;left:20px;right:20px;z-index:4;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;flex-direction:column;gap:14px;box-shadow:0 10px 30px rgba(40,0,0,.1)}
 .hf-links a{color:var(--ink);text-decoration:none;font-size:17px}
 .hf-links.open{display:flex}
-.hf-stage{position:relative;z-index:1;width:min(860px,96vw);height:min(78svh,760px);margin:8px auto 0;display:flex;align-items:flex-end;justify-content:center}
-.hf-img{position:absolute;inset:0;margin:0;z-index:0;
-  -webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 58%,rgba(0,0,0,.6) 74%,rgba(0,0,0,0) 100%);
-  mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 58%,rgba(0,0,0,.6) 74%,rgba(0,0,0,0) 100%)}
-.hf-img img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.hf-stage{position:relative;z-index:1;width:min(900px,96vw);height:min(80svh,780px);margin:4px auto 0;display:flex;align-items:flex-end;justify-content:center}
+.hf-img{position:absolute;inset:0;margin:0;z-index:0;display:flex;justify-content:center}
+.hf-img img{height:100%;width:auto;max-width:100%;object-fit:contain;object-position:50% 0%}
 .hf-shade{display:none}
-.hf-title{position:absolute;left:0;right:0;top:55%;z-index:2;margin:0;text-align:center;font-style:italic;font-size:clamp(40px,6.4vw,78px);line-height:.98;letter-spacing:-.01em;color:#F7F7FF;text-shadow:0 2px 18px rgba(0,0,0,.45);padding:0 20px}
+.hf-title{position:absolute;left:0;right:0;top:48.5%;z-index:2;margin:0;text-align:center;font-style:italic;font-size:clamp(40px,6.4vw,78px);line-height:.98;letter-spacing:-.01em;color:var(--ink);text-shadow:0 1px 0 rgba(247,247,255,.6),0 6px 24px rgba(247,247,255,.5);padding:0 20px}
 .hf-bottom{position:relative;z-index:2;text-align:center;padding:12px 20px 56px;max-width:720px}
 .hf-bottom .lead{color:var(--muted);font-size:clamp(16px,1.6vw,20px);margin:0 0 18px}
 .hf-bottom .btnrow{justify-content:center;margin-top:0}
@@ -179,8 +177,7 @@ footer a:hover{color:var(--ink)}
   .hf-nav::before{content:""}
   .hf-menu{display:inline-flex;align-items:center;justify-content:center}
   .hf-stage{width:100vw;height:min(66svh,560px)}
-  .hf-img{-webkit-mask-image:radial-gradient(ellipse 52% 50% at 50% 50%,#000 60%,rgba(0,0,0,.6) 78%,rgba(0,0,0,0) 100%);mask-image:radial-gradient(ellipse 52% 50% at 50% 50%,#000 60%,rgba(0,0,0,.6) 78%,rgba(0,0,0,0) 100%)}
-  .hf-img img{object-position:50% 28%}
-  .hf-title{font-size:clamp(34px,10.5vw,56px);top:54%}
+  .hf-img img{object-position:50% 0%}
+  .hf-title{font-size:clamp(34px,10.5vw,56px);top:48.5%}
   .hf-bottom{padding-bottom:36px}
 }
