@@ -163,7 +163,8 @@ footer a:hover{color:var(--ink)}
 .hf-links.open{display:flex}
 .hf-stage{position:relative;z-index:1;width:min(900px,96vw);height:min(80svh,780px);margin:4px auto 0;display:flex;align-items:flex-end;justify-content:center}
 .hf-img{position:absolute;inset:0;margin:0;z-index:0;display:flex;justify-content:center}
-.hf-img img{height:100%;width:auto;max-width:100%;object-fit:contain;object-position:50% 0%}
+.hf-img img{height:100%;width:auto;max-width:100%;object-fit:contain;object-position:50% 0%;
+  -webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,.35) 12%,#000 30%);mask-image:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,.35) 12%,#000 30%)}
 .hf-shade{display:none}
 .hf-title{position:absolute;left:0;right:0;top:48.5%;z-index:2;margin:0;text-align:center;display:flex;align-items:center;justify-content:center;gap:clamp(14px,2vw,28px);flex-wrap:wrap;font-style:italic;font-size:clamp(40px,6.4vw,78px);line-height:.98;letter-spacing:-.01em;color:var(--ink);text-shadow:0 1px 0 rgba(247,247,255,.6),0 6px 24px rgba(247,247,255,.5);padding:0 20px}
 .hf-mark img{display:block;width:clamp(48px,5.6vw,72px);height:auto;border-radius:16px;transform:skewX(-8deg)}
