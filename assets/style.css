@@ -3,7 +3,7 @@
   --accent:#E17714;--accent-ink:#1F2B30;--accent2:#A30000;--grey:#3B4E54;
   --dark:#280000;--dark2:#36090A;--on-dark:#F7F7FF;--on-dark-muted:#C9B4B4;
   --max:1080px;--r:14px;
-  --display:'Russo One',Impact,sans-serif;--body:Montserrat,system-ui,-apple-system,sans-serif;
+  --display:'Russo One',Impact,sans-serif;--body:Inter,system-ui,-apple-system,sans-serif;
   --slab:'Alfa Slab One',serif;--script:Yellowtail,cursive;
 }
 *{box-sizing:border-box}
