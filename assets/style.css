@@ -317,3 +317,6 @@ body.lang-es .btn.skew>span.es{display:inline-block}
 .steps .card .num{font-size:18px;margin:10px 0 0}
 .skew-cards .card .checks a{color:var(--accent)}
 @media (max-width:820px){.page-hero{padding-top:40px;padding-bottom:76px}}
+.sec-head .page-title{font-family:var(--display);font-style:italic;font-size:clamp(36px,5.2vw,64px);line-height:1.02;letter-spacing:-.01em;color:#F7F7FF;white-space:normal;text-transform:none}
+.section:not(.dark) .sec-head .h-caption:not(.grey){color:#F0CE47;-webkit-text-stroke:6px #C64519}
+.sec-head .h-caption.wrap{white-space:normal}
