@@ -294,3 +294,5 @@ body.lang-es .btn.skew>span.es{display:inline-block}
 .skew-cards .card{transform:skewX(-12deg);border-radius:6px;padding:26px 36px}
 .skew-cards .card>*{transform:skewX(12deg)}
 @media (max-width:820px){.skew-cards{padding:0 16px;gap:22px}}
+.skew-cards .card .num{margin:14px 0 0}
+.skew-cards .card p{margin-bottom:0}
