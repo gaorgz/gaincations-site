@@ -151,7 +151,9 @@ footer a:hover{color:var(--ink)}
 
 /* full-bleed hero (home): white page, oval-faded physique */
 .hero-full{position:relative;min-height:100svh;background:var(--bg);color:var(--ink);display:flex;flex-direction:column;align-items:center;overflow:hidden}
-.hf-nav{position:relative;z-index:3;width:calc(100% - 40px);max-width:1400px;margin:18px auto 0;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:8px 10px}
+.hf-nav{position:relative;z-index:3;width:calc(100% - 40px);max-width:1400px;margin:18px auto 0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:8px 10px}
+.hf-center{grid-column:2;display:flex;gap:34px;align-items:center;justify-content:center}
+.hf-right{grid-column:3}
 .hf-left,.hf-right{display:flex;gap:26px;align-items:center;font-size:15px;font-weight:500}
 .hf-right{justify-content:flex-end}
 .hf-nav a{color:var(--ink);text-decoration:none}
@@ -175,7 +177,8 @@ footer a:hover{color:var(--ink)}
 .btn.ghost.light{border-color:#CFC8D2;color:var(--ink)}
 .btn.ghost.light:hover{border-color:var(--ink)}
 @media (max-width:820px){
-  .hf-left,.hf-right{display:none}
+  .hf-left,.hf-center{display:none}
+  .hf-right{grid-column:1;justify-content:flex-start}
   .hf-nav{width:calc(100% - 24px);margin-top:12px;padding:8px 14px}
   .hf-nav::before{content:""}
   .hf-menu{display:inline-flex;align-items:center;justify-content:center}
@@ -195,10 +198,13 @@ body.lang-es .btn.skew>span.es{display:inline-block}
 .btn.skew:active{transform:skewX(-12deg) translateY(1px)}
 @media (max-width:820px){
   .hf-nav{grid-template-columns:1fr auto;width:calc(100% - 24px)}
+  .hf-menu{grid-column:2}
   .hf-menu{justify-self:end}
   .hf-title{gap:10px}
 }
 
 /* nav in display face */
 .hf-left a,.hf-right a,.hf-links a,.links a{font-family:var(--display);font-weight:400;font-size:14px;letter-spacing:.04em}
+.hf-center a{font-family:var(--display);font-weight:400;font-size:17px;letter-spacing:.04em;color:var(--ink);text-decoration:none}
+.hf-center a:hover{text-decoration:underline;text-underline-offset:5px}
 .hf-nav .langbtn,.langbtn{font-family:var(--display);font-weight:400;letter-spacing:.08em;font-size:12px}
