@@ -67,3 +67,13 @@ const EMBEDS = {
     if (p === here) a.classList.add("active");
   });
 })();
+
+// Check-in slideshow: crossfades every picture in .checkins, in document order.
+(function(){
+  var box=document.querySelector('.checkins'); if(!box) return;
+  var pics=box.querySelectorAll('picture'); if(pics.length<2) return;
+  var i=0;
+  setInterval(function(){
+    pics[i].classList.remove('on'); i=(i+1)%pics.length; pics[i].classList.add('on');
+  },3200);
+})();

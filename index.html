@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/style.css?v=202610220238">
+<link rel="stylesheet" href="/assets/style.css?v=202610220248">
 </head>
 <body>
 
@@ -137,11 +137,13 @@
       <p class="muted"><span class="en">I've lifted since 18 and got serious about food at 26. No gear, no full-time-athlete schedule. Everything on this site is what I actually do between jobs, in a garage gym, on a normal budget.</span><span class="es">Levanto pesas desde los 18 y me tomé en serio la comida a los 26. Sin sustancias, sin horario de atleta de tiempo completo. Todo lo que hay en este sitio es lo que realmente hago entre trabajos, en un gym de cochera, con un presupuesto normal.</span></p>
       <div class="btnrow"><a class="btn ghost yt-btn" data-link="YOUTUBE" href="#"><svg viewBox="0 0 28 20" width="26" height="18" aria-hidden="true"><rect x="0" y="0" width="28" height="20" rx="5" fill="#FF0000"/><polygon points="11,5 11,15 19,10" fill="#fff"/></svg><span class="en">Watch the videos</span><span class="es">Ver los videos</span></a></div>
     </div>
-    <div class="photo-card">
-      <picture>
-        <source srcset="/assets/img/hero.webp" type="image/webp">
-        <img src="/assets/img/hero.jpg" alt="Cris in his garage gym" loading="lazy">
-      </picture>
+    <!-- Daily check-ins. To add a day: drop dayNN.jpg + dayNN.webp in /assets/img/checkins and add one <picture> below, in order. -->
+    <div class="photo-card checkins" aria-label="Daily check-ins">
+      <picture class="on"><source srcset="/assets/img/checkins/day07.webp" type="image/webp"><img src="/assets/img/checkins/day07.jpg" alt="Day 7 check-in" loading="lazy"></picture>
+      <picture><source srcset="/assets/img/checkins/day12.webp" type="image/webp"><img src="/assets/img/checkins/day12.jpg" alt="Day 12 check-in" loading="lazy"></picture>
+      <picture><source srcset="/assets/img/checkins/day17.webp" type="image/webp"><img src="/assets/img/checkins/day17.jpg" alt="Day 17 check-in" loading="lazy"></picture>
+      <picture><source srcset="/assets/img/checkins/day19.webp" type="image/webp"><img src="/assets/img/checkins/day19.jpg" alt="Day 19 check-in" loading="lazy"></picture>
+      <picture><source srcset="/assets/img/checkins/day21.webp" type="image/webp"><img src="/assets/img/checkins/day21.jpg" alt="Day 21 check-in" loading="lazy"></picture>
     </div>
   </div>
 </section>
@@ -168,6 +170,6 @@
   </div>
 </footer>
 <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
-<script src="/assets/site.js?v=202610220238"></script>
+<script src="/assets/site.js?v=202610220248"></script>
 </body>
 </html>
