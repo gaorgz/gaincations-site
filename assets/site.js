@@ -109,3 +109,15 @@ const EMBEDS = {
   var qz=document.getElementById('quiz-box');
   if(qz) qz.addEventListener('click',function(){ paused=true; box.onmouseleave=null; },{once:true});
 })();
+
+// "Take the quiz" links: smooth-scroll so the quiz card sits in the middle of the screen.
+(function(){
+  var box=document.getElementById('quiz-box'); if(!box) return;
+  document.querySelectorAll('a[href="#quiz"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      box.scrollIntoView({behavior:'smooth',block:'center'});
+      history.replaceState(null,'','#quiz');
+    });
+  });
+})();
