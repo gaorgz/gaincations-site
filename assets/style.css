@@ -323,7 +323,7 @@ body.lang-es .btn.skew>span.es{display:inline-block}
 .page-top.orange,.page-hero.orange{background:var(--accent);color:var(--ink)}
 .page-hero.orange{position:relative;border-top:0}
 .page-top.orange .hf-nav a,.page-top.orange .hf-links a{color:var(--ink)}
-.page-top.orange .hf-primary .slash{background:var(--ink)}
+.page-top.orange .hf-center a.hf-primary{color:#F7F7FF}
 .page-top.orange .langbtn{border-color:rgba(59,78,84,.5);color:var(--ink)}
 .page-hero.orange .page-mark{background:var(--bg);border-radius:16px;padding:3px;width:62px}
 .page-hero.orange .sec-head .page-title{color:var(--ink)}
@@ -332,3 +332,4 @@ body.lang-es .btn.skew>span.es{display:inline-block}
 .page-hero.orange .btn.primary{background:var(--ink);color:#F7F7FF;border-color:var(--ink)}
 .page-hero.orange .btn.ghost{border-color:rgba(59,78,84,.6);color:var(--ink)}
 .page-hero.orange .btn.ghost:hover{border-color:var(--ink)}
+.hf-center a.hf-primary{color:var(--accent)}
