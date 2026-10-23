@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/style.css?v=202610222139">
+<link rel="stylesheet" href="/assets/style.css?v=202610222144">
 </head>
 <body>
 
@@ -85,25 +85,61 @@
     <div class="sec-head">
       <h2 class="h-hero h-caption"><span class="en">Why it isn't working for you yet</span><span class="es">Por qué aún no te está funcionando</span></h2>
     </div>
-    <div class="cols3">
+    <div class="cols-rot" id="pains">
+    <div class="cols3 on">
       <div class="col">
         <span class="slash" aria-hidden="true"></span>
         <h3><span class="en">You train. It doesn't show.</span><span class="es">Entrenas. No se nota.</span></h3>
-        <p><span class="en">More sessions won't fix that. The right plan will, and it'll show.</span><span class="es">Más sesiones no lo arreglan. El plan correcto sí, y se va a notar.</span></p>
+        <p><span class="en">Four, five sessions a week, and the mirror looks the same as last year.</span><span class="es">Cuatro, cinco sesiones por semana, y el espejo se ve igual que el año pasado.</span></p>
       </div>
       <div class="col">
         <span class="slash" aria-hidden="true"></span>
         <h3><span class="en">Your job eats your day.</span><span class="es">El trabajo se come tu día.</span></h3>
-        <p><span class="en">Meetings, driving, deadlines. You don't have two hours for the gym and a meal-prep Sunday. You need a plan that fits a real week.</span><span class="es">Juntas, manejo, entregas. No tienes dos horas para el gym y un domingo entero de meal prep. Necesitas un plan que quepa en una semana real.</span></p>
+        <p><span class="en">Meetings, driving, deadlines. There's no two hours for the gym and no meal-prep Sunday.</span><span class="es">Juntas, manejo, entregas. No hay dos horas para el gym ni un domingo de meal prep.</span></p>
       </div>
       <div class="col">
         <span class="slash" aria-hidden="true"></span>
-        <h3><span class="en">You want it natural.</span><span class="es">Lo quieres natural.</span></h3>
-        <p><span class="en">Natural, sustainable, no extremes. Slower, but permanent when you get there.</span><span class="es">Natural, sostenible, sin extremos. Más lento, pero permanente cuando llegas.</span></p>
+        <h3><span class="en">You "eat pretty clean."</span><span class="es">"Comes bastante bien."</span></h3>
+        <p><span class="en">And you've never actually looked at the number. Neither has the scale, in a year.</span><span class="es">Y nunca has visto el número de verdad. La báscula tampoco, en un año.</span></p>
       </div>
     </div>
+    <div class="cols3">
+      <div class="col">
+        <span class="slash" aria-hidden="true"></span>
+        <h3><span class="en">Monday is great. Thursday isn't.</span><span class="es">El lunes va bien. El jueves no.</span></h3>
+        <p><span class="en">The week starts perfect and falls apart by the time work does.</span><span class="es">La semana empieza perfecta y se cae cuando el trabajo se pone pesado.</span></p>
+      </div>
+      <div class="col">
+        <span class="slash" aria-hidden="true"></span>
+        <h3><span class="en">One work dinner undoes the week.</span><span class="es">Una cena de trabajo deshace la semana.</span></h3>
+        <p><span class="en">Clients, travel, the team lunch. You either skip it or write off the day.</span><span class="es">Clientes, viajes, la comida del equipo. O te lo saltas o das el día por perdido.</span></p>
+      </div>
+      <div class="col">
+        <span class="slash" aria-hidden="true"></span>
+        <h3><span class="en">You've tried the app.</span><span class="es">Ya probaste la app.</span></h3>
+        <p><span class="en">Macros for two weeks, then it got annoying, then it got deleted.</span><span class="es">Macros por dos semanas, luego se volvió molesto, luego se borró.</span></p>
+      </div>
+    </div>
+    <div class="cols3">
+      <div class="col">
+        <span class="slash" aria-hidden="true"></span>
+        <h3><span class="en">You run to make up for it.</span><span class="es">Corres para compensar.</span></h3>
+        <p><span class="en">Cardio as punishment for the weekend. It burns an hour and builds nothing.</span><span class="es">Cardio como castigo por el fin de semana. Quema una hora y no construye nada.</span></p>
+      </div>
+      <div class="col">
+        <span class="slash" aria-hidden="true"></span>
+        <h3><span class="en">You lose weight and look worse.</span><span class="es">Bajas de peso y te ves peor.</span></h3>
+        <p><span class="en">Smaller, softer, same shape. That's muscle leaving, not fat.</span><span class="es">Más pequeño, más suave, misma forma. Eso es músculo que se va, no grasa.</span></p>
+      </div>
+      <div class="col">
+        <span class="slash" aria-hidden="true"></span>
+        <h3><span class="en">You keep starting over.</span><span class="es">Sigues empezando de cero.</span></h3>
+        <p><span class="en">Every January, every Monday, every "this time." Twelve weeks in a row has never happened.</span><span class="es">Cada enero, cada lunes, cada "esta vez sí." Doce semanas seguidas nunca han pasado.</span></p>
+      </div>
+    </div>
+    </div>
     <div class="qz-intro" id="quiz">
-      <div class="eyebrow below"><span class="en">Answer five questions and I'll tell you exactly which one is yours</span><span class="es">Responde cinco preguntas y te digo exactamente cuál es el tuyo</span></div>
+      <h3 class="qz-h"><span class="en">Answer five questions and I'll tell you exactly which one is yours.</span><span class="es">Responde cinco preguntas y te digo exactamente cuál es el tuyo.</span></h3>
     </div>
     <div class="qz" id="quiz-box"></div>
   </div>
@@ -172,7 +208,7 @@
   </div>
 </footer>
 <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
-<script src="/assets/quiz.js?v=202610222139"></script>
-<script src="/assets/site.js?v=202610222139"></script>
+<script src="/assets/quiz.js?v=202610222144"></script>
+<script src="/assets/site.js?v=202610222144"></script>
 </body>
 </html>

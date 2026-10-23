@@ -77,3 +77,9 @@ const EMBEDS = {
     pics[i].classList.remove('on'); i=(i+1)%pics.length; pics[i].classList.add('on');
   },3200);
 })();
+
+// Rotate the pain columns: three at a time, every 10 s.
+(function(){
+  var groups=document.querySelectorAll('#pains .cols3'); if(groups.length<2) return;
+  var i=0; setInterval(function(){ groups[i].classList.remove('on'); i=(i+1)%groups.length; groups[i].classList.add('on'); },10000);
+})();
