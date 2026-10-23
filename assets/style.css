@@ -217,9 +217,9 @@ body.lang-es .btn.skew>span.es{display:inline-block}
 .hf-nav .langbtn,.langbtn{font-family:var(--display);font-weight:400;letter-spacing:.08em;font-size:12px}
 
 /* primary nav link with orange slash */
-.hf-primary{position:relative;display:inline-block}
-.hf-primary .slash{position:absolute;left:4px;right:4px;bottom:0;height:4px;background:var(--accent);transform:skewX(-30deg);border-radius:1px;transition:left .18s ease,right .18s ease}
-.hf-primary:hover .slash{left:0;right:0}
+.hf-primary,.hf-current{position:relative;display:inline-block}
+.hf-current .slash{position:absolute;left:4px;right:4px;bottom:0;height:4px;background:var(--accent);transform:skewX(-30deg);border-radius:1px;transition:left .18s ease,right .18s ease}
+.hf-current:hover .slash{left:0;right:0}
 .hf-nav .langbtn{padding:7px 14px}
 
 /* clip strip under the hero */
@@ -333,3 +333,7 @@ body.lang-es .btn.skew>span.es{display:inline-block}
 .page-hero.orange .btn.ghost{border-color:rgba(59,78,84,.6);color:var(--ink)}
 .page-hero.orange .btn.ghost:hover{border-color:var(--ink)}
 .hf-center a.hf-primary{color:var(--accent)}
+.page-top.orange .hf-current .slash{background:#F7F7FF}
+footer.orange{background:var(--accent);color:#1F2B30;border-top:0;padding:0 0 36px}
+footer.orange a{color:#1F2B30}
+footer.orange .wrap{border-top:1px solid rgba(31,43,48,.25);padding-top:24px}
