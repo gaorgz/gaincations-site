@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/style.css?v=202610222219">
+<link rel="stylesheet" href="/assets/style.css?v=202610222224">
 </head>
 <body>
 
@@ -85,8 +85,7 @@
     <div class="sec-head">
       <h2 class="h-hero h-caption"><span class="en">Why it isn't working for you yet</span><span class="es">Por qué aún no te está funcionando</span></h2>
     </div>
-    <div class="cols-rot" id="pains">
-    <div class="cols3 on">
+    <div class="pains-src" hidden>
       <div class="col">
         <span class="slash" aria-hidden="true"></span>
         <h3><span class="en">You train. It doesn't show.</span><span class="es">Entrenas. No se nota.</span></h3>
@@ -102,8 +101,6 @@
         <h3><span class="en">You "eat pretty clean."</span><span class="es">"Comes bastante bien."</span></h3>
         <p><span class="en">But you don't actually know what works for you, and the scale and the mirror keep reminding you.</span><span class="es">Pero en realidad no sabes qué te funciona, y la báscula y el espejo te lo siguen recordando.</span></p>
       </div>
-    </div>
-    <div class="cols3">
       <div class="col">
         <span class="slash" aria-hidden="true"></span>
         <h3><span class="en">One dinner or weekend undoes the week.</span><span class="es">Una cena o un fin de semana deshace la semana.</span></h3>
@@ -119,8 +116,6 @@
         <h3><span class="en">You've tried the apps and programs.</span><span class="es">Ya probaste las apps y los programas.</span></h3>
         <p><span class="en">Macros and consistent workouts for two weeks, then it gets annoying and deleted.</span><span class="es">Macros y entrenos constantes por dos semanas, luego se vuelve molesto y se borra.</span></p>
       </div>
-    </div>
-    <div class="cols3">
       <div class="col">
         <span class="slash" aria-hidden="true"></span>
         <h3><span class="en">You run to make up for it.</span><span class="es">Corres para compensar.</span></h3>
@@ -137,6 +132,10 @@
         <p><span class="en">Every January, every Monday, every "this time."</span><span class="es">Cada enero, cada lunes, cada "esta vez sí."</span></p>
       </div>
     </div>
+    <div class="cols3 pains" id="pains">
+      <div class="col slot"></div>
+      <div class="col slot"></div>
+      <div class="col slot"></div>
     </div>
     <div class="qz-intro" id="quiz">
       <h3 class="qz-h"><span class="en">Answer five questions.</span><span class="es">Responde cinco preguntas.</span></h3>
@@ -209,7 +208,7 @@
   </div>
 </footer>
 <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
-<script src="/assets/quiz.js?v=202610222219"></script>
-<script src="/assets/site.js?v=202610222219"></script>
+<script src="/assets/quiz.js?v=202610222224"></script>
+<script src="/assets/site.js?v=202610222224"></script>
 </body>
 </html>

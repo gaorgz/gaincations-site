@@ -78,8 +78,34 @@ const EMBEDS = {
   },3200);
 })();
 
-// Rotate the pain columns: three at a time, every 10 s.
+// Pain columns: three slots. Every 6 s two slots swap to the next cards; the third is "held"
+// for a second cycle with a light sweep. Pauses on hover and once the quiz is started.
 (function(){
-  var groups=document.querySelectorAll('#pains .cols3'); if(groups.length<2) return;
-  var i=0; setInterval(function(){ groups[i].classList.remove('on'); i=(i+1)%groups.length; groups[i].classList.add('on'); },10000);
+  var src=document.querySelectorAll('.pains-src .col'), slots=document.querySelectorAll('#pains .slot');
+  if(!src.length||!slots.length) return;
+  var cards=Array.prototype.map.call(src,function(c){return c.innerHTML;});
+  var n=0, held=0, mobile=window.matchMedia('(max-width:820px)').matches, paused=false, timer=null;
+  function fill(slot,html,cb){
+    slot.classList.add('out');
+    setTimeout(function(){ slot.innerHTML=html; slot.classList.remove('out'); if(cb) cb(); },720);
+  }
+  function shine(slot){ slot.classList.remove('held'); void slot.offsetWidth; slot.classList.add('held'); }
+  function next(){ var h=cards[n%cards.length]; n++; return h; }
+  // initial state
+  slots.forEach(function(s){ s.innerHTML=next(); });
+  shine(slots[0]);
+  function tick(){
+    if(paused) return;
+    if(mobile){ fill(slots[0],next(),function(){ shine(slots[0]); }); return; }
+    held=(held+1)%slots.length;
+    slots.forEach(function(s,i){
+      if(i===held){ shine(s); } else { s.classList.remove('held'); fill(s,next()); }
+    });
+  }
+  timer=setInterval(tick,6000);
+  var box=document.getElementById('pains');
+  box.addEventListener('mouseenter',function(){ paused=true; });
+  box.addEventListener('mouseleave',function(){ paused=false; });
+  var qz=document.getElementById('quiz-box');
+  if(qz) qz.addEventListener('click',function(){ paused=true; box.onmouseleave=null; },{once:true});
 })();
