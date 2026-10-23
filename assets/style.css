@@ -329,7 +329,8 @@ body.lang-es .btn.skew>span.es{display:inline-block}
 .page-hero.orange .sec-head .page-title{color:var(--ink)}
 .page-hero.orange .eyebrow{color:var(--ink)}
 .page-hero.orange .sec-head .sub.light{color:#2C3A40}
-.page-hero.orange .btn.primary{background:var(--ink);color:#F7F7FF;border-color:var(--ink)}
+.page-hero.orange .btn.primary{background:#F0CE47;color:var(--accent-ink);border-color:#F0CE47}
+.page-hero.orange .btn.primary:hover{background:#F6D75E;filter:none}
 .page-hero.orange .btn.ghost{border-color:rgba(59,78,84,.6);color:var(--ink)}
 .page-hero.orange .btn.ghost:hover{border-color:var(--ink)}
 .hf-center a.hf-primary{color:var(--accent)}
