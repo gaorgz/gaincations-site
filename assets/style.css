@@ -374,3 +374,8 @@ footer.orange .wrap{border-top:1px solid rgba(31,43,48,.25);padding-top:24px}
 .cols-rot .cols3{grid-area:1/1;opacity:0;transition:opacity .9s ease;pointer-events:none}
 .cols-rot .cols3.on{opacity:1;pointer-events:auto}
 .qz-intro .eyebrow.below{margin:10px 0 0}
+.section.dark .qz{transform:skewX(-6deg);border-left:0;padding:34px 48px;max-width:760px}
+.section.dark .qz>*{transform:skewX(6deg)}
+.section.dark .qz::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--accent)}
+.section.dark .qz{position:relative;overflow:hidden}
+@media (max-width:820px){.section.dark .qz{transform:skewX(-4deg);padding:24px 28px}.section.dark .qz>*{transform:skewX(4deg)}}
