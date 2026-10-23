@@ -367,3 +367,6 @@ footer.orange .wrap{border-top:1px solid rgba(31,43,48,.25);padding-top:24px}
 .section.dark .qz{border-color:transparent;box-shadow:0 18px 50px rgba(0,0,0,.25);color:var(--ink)}
 .section.dark .qz .eyebrow{color:var(--accent)}
 .section.dark{padding-bottom:96px}
+.section.pointer .sec-head{margin-bottom:0;max-width:760px}
+.section.pointer .sub{max-width:640px;margin:16px auto 0}
+.section.dark + .section{padding-top:84px}
