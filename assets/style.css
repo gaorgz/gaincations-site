@@ -394,8 +394,8 @@ footer.orange .wrap{border-top:1px solid rgba(31,43,48,.25);padding-top:24px}
 .pains .slot{position:relative;min-height:150px;transition:opacity .7s ease}
 .pains .slot.out{opacity:0}
 .pains .slot .inner{transition:opacity .7s ease}
-.pains .slot.held::after{content:"";position:absolute;inset:-6px -10px;pointer-events:none;border-radius:8px;
-  background:linear-gradient(115deg,transparent 35%,rgba(247,247,255,.22) 50%,transparent 65%);
-  background-size:260% 100%;background-position:120% 0;animation:pain-shine 1.6s ease-out 1 forwards}
+.pains .slot.held h3,.pains .slot.held p{-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;background-size:260% 100%;background-position:120% 0;animation:pain-shine 1.6s ease-out 1 forwards}
+.pains .slot.held h3{background-image:linear-gradient(115deg,#F7F7FF 40%,#FFD27A 50%,#F7F7FF 60%)}
+.pains .slot.held p{background-image:linear-gradient(115deg,rgba(247,247,255,.78) 40%,#FFE9B8 50%,rgba(247,247,255,.78) 60%)}
 @keyframes pain-shine{from{background-position:120% 0}to{background-position:-60% 0}}
 @media (max-width:820px){.pains .slot:nth-child(n+2){display:none}.cols3 .col{border-left:0 !important;padding:8px 0 4px}}
