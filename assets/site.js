@@ -83,3 +83,10 @@ const EMBEDS = {
   var groups=document.querySelectorAll('#pains .cols3'); if(groups.length<2) return;
   var i=0; setInterval(function(){ groups[i].classList.remove('on'); i=(i+1)%groups.length; groups[i].classList.add('on'); },10000);
 })();
+
+// "Day N and counting" follows the last check-in in the slideshow.
+(function(){
+  var pics=document.querySelectorAll('.checkins img'); if(!pics.length) return;
+  var m=(pics[pics.length-1].alt||'').match(/\d+/); if(!m) return;
+  document.querySelectorAll('[data-day]').forEach(function(e){ e.textContent=m[0]; });
+})();
