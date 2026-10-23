@@ -140,10 +140,12 @@
       box.innerHTML = `
         <div class="qz-prog">${step+1} ${tt.of} 5</div>
         <div class="qz-bar"><span style="width:${(step)/5*100}%"></span></div>
-        <h3 class="qz-q">${esc(tt.q[step])}</h3>
-        <div class="btnrow qz-row">
-          <button class="btn primary skew" data-a="yes"><span>${tt.yes}</span></button>
-          <button class="btn ghost light skew" data-a="no"><span>${tt.no}</span></button>
+        <div class="qz-step">
+          <h3 class="qz-q">${esc(tt.q[step])}</h3>
+          <div class="btnrow qz-row">
+            <button class="btn primary skew" data-a="yes"><span>${tt.yes}</span></button>
+            <button class="btn ghost light skew" data-a="no"><span>${tt.no}</span></button>
+          </div>
         </div>
         ${step>0?`<button class="qz-back" data-back>${tt.back}</button>`:""}`;
     } else if (step === 5) {
