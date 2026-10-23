@@ -220,6 +220,7 @@ body.lang-es .btn.skew>span.es{display:inline-block}
 .hf-primary,.hf-current{position:relative;display:inline-block}
 .hf-current .slash{position:absolute;left:4px;right:4px;bottom:0;height:4px;background:var(--accent);transform:skewX(-30deg);border-radius:1px;transition:left .18s ease,right .18s ease}
 .hf-current:hover .slash{left:0;right:0}
+.hf-nav a.hf-current:hover,.hf-links a.hf-current:hover{text-decoration:none}
 .hf-nav .langbtn{padding:7px 14px}
 
 /* clip strip under the hero */
@@ -329,8 +330,8 @@ body.lang-es .btn.skew>span.es{display:inline-block}
 .page-hero.orange .sec-head .page-title{color:var(--ink)}
 .page-hero.orange .eyebrow{color:var(--ink)}
 .page-hero.orange .sec-head .sub.light{color:#2C3A40}
-.page-hero.orange .btn.primary{background:#F0CE47;color:var(--accent-ink);border-color:#F0CE47}
-.page-hero.orange .btn.primary:hover{background:#F6D75E;filter:none}
+.page-hero.orange .btn.primary{background:#FFD92E;color:var(--accent-ink);border-color:#FFD92E;box-shadow:0 6px 18px rgba(31,43,48,.18)}
+.page-hero.orange .btn.primary:hover{background:#FFE866;filter:none}
 .page-hero.orange .btn.ghost{border-color:rgba(59,78,84,.6);color:var(--ink)}
 .page-hero.orange .btn.ghost:hover{border-color:var(--ink)}
 .hf-center a.hf-primary{color:var(--accent)}
