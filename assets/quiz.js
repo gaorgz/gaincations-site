@@ -13,8 +13,8 @@
   const T = {
     en: {
       of: "of", yes: "Yes", no: "No", back: "Back",
-      emailTitle: "That's it.",
-      emailText: "Drop your email and I'll tell you exactly what's going on from your answers, plus the plan: what to do tonight, this week, and from now on.",
+      emailTitle: "That's it. Your result is ready.",
+      emailText: "Drop your email and I'll tell you which of the five checks you're failing and what to do tonight, this week, and from now on. You also get the free guide, The Built to Show Audit: 18 pages with your calorie and protein targets, a 3-day lifting plan, the Sunday check-in rules, and a worksheet to run it all.",
       emailPh: "you@email.com", emailBtn: "Show me", emailBad: "That email doesn't look right.",
       resultEyebrow: "Your result", yourProblem: "Your problem is", also: "You also flagged", alsoTail: "The guide covers those too.",
       tonight: "Tonight", week: "This week", forever: "From now on",
@@ -67,8 +67,8 @@
     },
     es: {
       of: "de", yes: "Sí", no: "No", back: "Atrás",
-      emailTitle: "Eso es todo.",
-      emailText: "Deja tu correo y te digo exactamente qué está pasando según tus respuestas, más el plan: qué hacer hoy, esta semana y de aquí en adelante.",
+      emailTitle: "Eso es todo. Tu resultado está listo.",
+      emailText: "Deja tu correo y te digo cuál de los cinco puntos estás fallando y qué hacer hoy, esta semana y de aquí en adelante. También recibes la guía gratis, The Built to Show Audit: 18 páginas con tus metas de calorías y proteína, un plan de pesas de 3 días, las reglas de la revisión del domingo y una hoja para llevarlo todo.",
       emailPh: "tu@correo.com", emailBtn: "Ver mi resultado", emailBad: "Ese correo no se ve bien.",
       resultEyebrow: "Tu resultado", yourProblem: "Tu problema es", also: "También marcaste", alsoTail: "La guía también cubre eso.",
       tonight: "Hoy", week: "Esta semana", forever: "De aquí en adelante",
