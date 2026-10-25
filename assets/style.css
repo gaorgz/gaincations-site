@@ -403,7 +403,8 @@ footer.orange .wrap{border-top:1px solid rgba(31,43,48,.25);padding-top:24px}
 @media (max-width:820px){.pains .slot:nth-child(n+2){display:none}.cols3 .col{border-left:0 !important;padding:8px 0 4px}}
 
 /* social icons in nav */
-.hf-social{display:flex;gap:14px;align-items:center;margin-right:4px}
+.hf-social{display:flex;gap:14px;align-items:center}
+.hf-left{grid-column:1;justify-content:flex-start}
 .hf-ico{display:inline-flex;color:var(--ink);opacity:.85;line-height:0}
 .hf-ico:hover{opacity:1;color:var(--accent);text-decoration:none}
 .page-top.orange .hf-ico{color:var(--ink)}
