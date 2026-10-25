@@ -410,3 +410,19 @@ footer.orange .wrap{border-top:1px solid rgba(31,43,48,.25);padding-top:24px}
 .page-top.orange .hf-ico{color:var(--ink)}
 .page-top.orange .hf-ico:hover{color:#F7F7FF}
 .hf-links .hf-social{margin-top:4px}
+
+/* pointer section: orange, hero-style italic title */
+.section.pointer.orange{background:var(--accent);color:var(--accent-ink)}
+.section.pointer.orange .pointer-h{font-family:var(--display);font-style:italic;font-size:clamp(32px,4.2vw,52px);line-height:1.02;letter-spacing:-.01em;color:var(--accent-ink);white-space:normal;text-transform:none}
+.section.pointer.orange .eyebrow{color:var(--accent-ink)}
+.section.pointer.orange .sub{color:#2C3A40}
+.section.pointer.orange .btn.primary{background:var(--accent-ink);color:#F7F7FF;border-color:var(--accent-ink)}
+.section.pointer.orange .btn.ghost.light{border-color:rgba(31,43,48,.55);color:var(--accent-ink)}
+.section.pointer.orange .btn.ghost.light:hover{border-color:var(--accent-ink)}
+/* band: white variant */
+.band.white{background:#fff;color:var(--ink);border-top:1px solid var(--line)}
+.band.white h2{color:var(--ink)}
+.band.white p{color:var(--muted)}
+.band.white .btn.primary{background:var(--accent);color:var(--accent-ink)}
+.band.white .btn.ghost{border-color:#CFC8D2;color:var(--ink)}
+.band.white .btn.ghost:hover{border-color:var(--ink)}
