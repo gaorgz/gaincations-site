@@ -8,7 +8,8 @@ const LINKS = {
   CHECKOUT:  "https://buy.stripe.com/eVqdR91Py4Ps4lG31LgQE01",  // Stripe Payment Link: 1-on-1 Coaching, $349.00/mo
   CALL:      "https://calendly.com/gaincations/15min",
   KICKOFF:   "https://calendly.com/gaincations/kickoff-call-new-clients",
-  INTAKE:    "https://tally.so/r/zEEGO8",  // Calendly
+  INTAKE:    "https://tally.so/r/zEEGO8",
+  PORTAL:    "https://billing.stripe.com/p/login/7sYeVdeCk2HkaK4dGpgQE00",  // Stripe customer portal (manage / cancel)
   FREE:      "#get",                    // Lead magnet form (embedded on free page)
   EMAIL:     "mailto:gaincations@gmail.com"
 };
