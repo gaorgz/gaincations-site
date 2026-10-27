@@ -433,3 +433,12 @@ footer.white a{color:var(--ink)}
 .mech{max-width:560px;margin:40px auto 0;text-align:center;color:var(--on-dark-muted);font-family:var(--body);font-size:clamp(16px,1.7vw,19px);line-height:1.5}
 .mech b{color:#F7F7FF;font-weight:600}
 .section.dark .eyebrow.below{color:var(--accent)}
+
+.agreement{max-width:720px}
+.agreement h3{font-family:var(--display);font-weight:400;font-size:18px;margin:26px 0 8px;color:var(--ink)}
+.agreement p{color:var(--muted);margin:0 0 6px}
+.agreement a{color:var(--accent2)}
+.agreement .sig{font-family:var(--display);color:var(--ink);margin-top:28px}
+.agreement .es{display:none}
+body.lang-es .agreement .en{display:none}
+body.lang-es .agreement .es{display:block}

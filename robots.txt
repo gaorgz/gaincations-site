@@ -3,3 +3,4 @@ Allow: /
 Sitemap: https://gaincations.com/sitemap.xml
 
 Disallow: /welcome
+Disallow: /agreement
