@@ -5,7 +5,7 @@ const LINKS = {
   INSTAGRAM: "https://www.instagram.com/gaincations",
   TIKTOK:    "https://www.tiktok.com/@gaincations",
   APPLY:     "#apply",                  // Tally form (embedded on coaching page)
-  CHECKOUT:  "https://buy.stripe.com/7sYeVdeCk2HkaK4dGpgQE00",  // Stripe Payment Link: 1-on-1 Coaching (Founding)
+  CHECKOUT:  "https://buy.stripe.com/eVqdR91Py4Ps4lG31LgQE01",  // Stripe Payment Link: 1-on-1 Coaching, $349.00/mo
   CALL:      "https://calendly.com/gaincations/15min",  // Calendly
   FREE:      "#get",                    // Lead magnet form (embedded on free page)
   EMAIL:     "mailto:gaincations@gmail.com"
