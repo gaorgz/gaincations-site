@@ -120,6 +120,7 @@
     }
   };
 
+  const track = (ev, props) => { try { window.posthog && posthog.capture(ev, props || {}); } catch (e) {} };
   let step = 0;            // 0..4 questions, 5 email, 6 result
   const answers = [];      // "yes"/"no"
   let email = "";
@@ -178,9 +179,9 @@
           </div>`;
       }
       html += `<div class="btnrow qz-row">
-          <a class="btn primary skew" href="${GUIDE_URL}" target="_blank" rel="noopener"><span>${tt.download}</span></a>
+          <a class="btn primary skew" href="${GUIDE_URL}" target="_blank" rel="noopener" data-track="guide_downloaded"><span>${tt.download}</span></a>
         </div>
-        <p class="qz-text qz-coach">${tt.coachLine} <a href="/coaching">${tt.coachBtn}</a></p>
+        <p class="qz-text qz-coach">${tt.coachLine} <a href="/coaching" data-track="coaching_clicked" data-from="quiz_result">${tt.coachBtn}</a></p>
         <button class="qz-back" data-back="restart">${tt.restart}</button>`;
       box.innerHTML = html;
     }
@@ -199,7 +200,12 @@
 
   box.addEventListener("click", e => {
     const a = e.target.closest("[data-a]");
-    if (a) { answers[step] = a.dataset.a; step++; render(); return; }
+    if (a) {
+      if (step === 0) track("quiz_started");
+      answers[step] = a.dataset.a; step++;
+      if (step === 5) track("quiz_completed");
+      render(); return;
+    }
     const b = e.target.closest("[data-back]");
     if (b) { if (b.dataset.back === "restart") { step = 0; answers.length = 0; } else { step--; } render(); }
   });
@@ -209,6 +215,8 @@
     email = (inp.value || "").trim();
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { box.querySelector(".qz-err").hidden = false; inp.focus(); return; }
     save();
+    try { posthog.identify(email, { email }); } catch (e) {}
+    track("quiz_email_submitted", { result: (flagged()[0] || "none") });
     step = 6; render();
     box.scrollIntoView({ behavior: "smooth", block: "start" });
   });

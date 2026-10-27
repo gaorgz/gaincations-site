@@ -51,6 +51,21 @@ const EMBEDS = {
     box.appendChild(f);
   });
 
+  // analytics: tracked clicks
+  const track = (ev, props) => { try { window.posthog && posthog.capture(ev, props || {}); } catch (e) {} };
+  document.addEventListener("click", e => {
+    const el = e.target.closest("a,button");
+    if (!el) return;
+    const t = el.getAttribute("data-track");
+    if (t) { track(t, { from: el.getAttribute("data-from") || location.pathname }); return; }
+    const l = el.getAttribute("data-link");
+    if (l === "CHECKOUT") track("checkout_clicked", { from: location.pathname });
+    else if (l === "CALL") track("call_clicked", { from: location.pathname });
+    else if (l === "YOUTUBE" || l === "TIKTOK" || l === "INSTAGRAM") track("social_clicked", { platform: l.toLowerCase(), from: location.pathname });
+    else if (el.getAttribute("href") === "/coaching") track("coaching_clicked", { from: location.pathname });
+    else if (el.getAttribute("href") === "#quiz") track("quiz_cta_clicked", { from: location.pathname });
+  });
+
   // spots counter
   document.querySelectorAll("#spots, #spots-es").forEach(e => e.textContent = SPOTS_LEFT);
 
