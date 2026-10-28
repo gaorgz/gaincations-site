@@ -471,9 +471,9 @@ body.lang-es .agreement .es{display:block}
 
 /* ===== coaching: dark theme ===== */
 body.theme-dark{background:#0E0F12;color:#F7F7FF}
-body.theme-dark .page-hero.black .hero-grid{grid-template-columns:1.08fr .92fr;gap:16px}
+body.theme-dark .page-hero.black .hero-grid{grid-template-columns:1fr 1.05fr;gap:8px}
 body.theme-dark .page-hero.black .sec-head .page-title{font-size:clamp(36px,4.6vw,60px)}
-body.theme-dark .page-hero.black .coach-photo img{max-width:620px}
+body.theme-dark .page-hero.black .coach-photo img{max-width:680px}
 body.theme-dark .page-title .hl{font-style:inherit;color:var(--accent)}
 body.theme-dark .hero-note{margin:18px 0 0;font-size:14px;letter-spacing:.02em;color:rgba(247,247,255,.6)}
 body.theme-dark .section:not(.page-hero){background:#0E0F12;color:#F7F7FF;border-top:0}
