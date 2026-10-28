@@ -561,9 +561,10 @@ body.theme-dark .trust-strip .wrap>span:not(.logos-label)::before{content:"";dis
 body.theme-dark .logos{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:-6px;position:relative}
 body.theme-dark .logos-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,247,255,.45);font-weight:600;margin-right:6px}
 body.theme-dark .logos svg{width:72px;height:72px;color:rgba(247,247,255,.18)}
-body.theme-dark .logos svg:nth-child(1){transform:rotate(-4deg) translateY(6px)}
+body.theme-dark .logos .site-mark{width:78px;height:78px;opacity:.18;transform:rotate(-6deg) translateY(-8px)}
+body.theme-dark .logos svg:nth-child(2){transform:rotate(-3deg) translateY(8px)}
 body.theme-dark .logos svg.tilt{transform:rotate(-14deg) translateY(-10px) scale(1.08)}
-body.theme-dark .logos svg:nth-child(3){transform:rotate(7deg) translateY(4px) scale(.94)}
+body.theme-dark .logos svg:nth-child(4){transform:rotate(7deg) translateY(2px) scale(.94)}
 body.theme-dark .promise-block{max-width:720px;margin:44px auto 0;text-align:center;border:1px solid rgba(225,119,20,.45);background:rgba(225,119,20,.07);border-radius:8px;padding:26px 28px}
 body.theme-dark .promise-block h3{font-family:var(--display);font-size:clamp(24px,3vw,34px);margin:8px 0 10px;color:#F7F7FF}
 body.theme-dark .promise-block p{margin:0;font-size:17px;line-height:1.55;color:rgba(247,247,255,.85)}
@@ -575,4 +576,5 @@ body.theme-dark .steps .card b{color:#F7F7FF;display:block;margin-bottom:4px}
   body.theme-dark .logos{margin-top:16px;gap:18px;flex-wrap:wrap}
   body.theme-dark .logos{gap:16px}
   body.theme-dark .logos svg{width:54px;height:54px}
+  body.theme-dark .logos .site-mark{width:58px;height:58px}
 }
