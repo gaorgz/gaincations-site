@@ -198,6 +198,19 @@
     }).catch(() => {});
   }
 
+  // Kit (email tool): subscribe to the Quiz form, tagged by result + language.
+  const KIT_FORM = "https://app.kit.com/forms/10106751/subscriptions";
+  const KIT_TAGS = { quiz: 25094688, food: 25094689, protein: 25094690, training: 25094691, recovery: 25094692, time: 25094693, none: 25094694, es: 25094696 };
+  function saveKit(){
+    const f = flagged(); const result = f[0] || "none";
+    const fd = new FormData();
+    fd.append("email_address", email);
+    fd.append("tags[]", KIT_TAGS.quiz);
+    if (KIT_TAGS[result]) fd.append("tags[]", KIT_TAGS[result]);
+    if (lang() === "es") fd.append("tags[]", KIT_TAGS.es);
+    return fetch(KIT_FORM, { method: "POST", body: fd, headers: { "Accept": "application/json" }, keepalive: true }).catch(() => {});
+  }
+
   box.addEventListener("click", e => {
     const a = e.target.closest("[data-a]");
     if (a) {
@@ -214,7 +227,7 @@
     const inp = box.querySelector("input[name=email]");
     email = (inp.value || "").trim();
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { box.querySelector(".qz-err").hidden = false; inp.focus(); return; }
-    save();
+    save(); saveKit();
     try { posthog.identify(email, { email }); } catch (e) {}
     track("quiz_email_submitted", { result: (flagged()[0] || "none") });
     step = 6; render();
