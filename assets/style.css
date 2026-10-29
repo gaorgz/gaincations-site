@@ -627,6 +627,7 @@ html.motion body.theme-dark .logos{animation:heroUp .9s .6s cubic-bezier(.2,.7,.
 @keyframes heroPhoto{from{opacity:0;transform:scale(1.04)}to{opacity:1;transform:scale(1)}}
 body.theme-dark .card,body.theme-dark .rcard{transition:transform .25s ease,border-color .25s ease,opacity .6s ease}
 body.theme-dark .rv.in.card:hover,body.theme-dark .rv.in.rcard:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.16)}
+body.theme-dark .skew-cards .card:hover{border-color:rgba(255,255,255,.16)}
 body.theme-dark .price-card.rv.in:hover{transform:none}
 body.theme-dark details summary::after{transition:transform .25s ease;display:inline-block}
 body.theme-dark details[open] summary::after{transform:rotate(180deg)}
