@@ -612,3 +612,26 @@ body.theme-dark .results .btnrow.center{margin-top:22px}
   body.theme-dark .rcard figcaption b{font-size:18px}
   body.theme-dark .rcard .who{font-size:12px}
 }
+
+/* coaching: motion */
+body.theme-dark .rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+body.theme-dark .rv.in{opacity:1;transform:none}
+html.motion body.theme-dark .page-hero .sec-head>*{animation:heroUp .8s cubic-bezier(.2,.7,.2,1) both}
+html.motion body.theme-dark .page-hero .sec-head>*:nth-child(1){animation-delay:.05s}
+html.motion body.theme-dark .page-hero .sec-head>*:nth-child(2){animation-delay:.15s}
+html.motion body.theme-dark .page-hero .sec-head>*:nth-child(3){animation-delay:.28s}
+html.motion body.theme-dark .page-hero .sec-head>*:nth-child(4){animation-delay:.4s}
+html.motion body.theme-dark .page-hero .coach-photo img{animation:heroPhoto 1.3s cubic-bezier(.2,.7,.2,1) both}
+html.motion body.theme-dark .logos{animation:heroUp .9s .6s cubic-bezier(.2,.7,.2,1) both}
+@keyframes heroUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes heroPhoto{from{opacity:0;transform:scale(1.04)}to{opacity:1;transform:scale(1)}}
+body.theme-dark .card,body.theme-dark .rcard{transition:transform .25s ease,border-color .25s ease,opacity .6s ease}
+body.theme-dark .rv.in.card:hover,body.theme-dark .rv.in.rcard:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.16)}
+body.theme-dark .price-card.rv.in:hover{transform:none}
+body.theme-dark details summary::after{transition:transform .25s ease;display:inline-block}
+body.theme-dark details[open] summary::after{transform:rotate(180deg)}
+body.theme-dark details[open] p{animation:faqIn .28s ease both}
+@keyframes faqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+body.theme-dark .btn.primary.glow{animation:breathe 3.2s ease-in-out infinite}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 1px rgba(225,119,20,.35),0 8px 30px rgba(225,119,20,.45),0 0 60px rgba(225,119,20,.25)}50%{box-shadow:0 0 0 1px rgba(225,119,20,.5),0 10px 36px rgba(225,119,20,.6),0 0 80px rgba(225,119,20,.38)}}
+@media (prefers-reduced-motion:reduce){body.theme-dark .rv{opacity:1;transform:none;transition:none}body.theme-dark .btn.primary.glow{animation:none}html.motion body.theme-dark .page-hero .sec-head>*,html.motion body.theme-dark .page-hero .coach-photo img,html.motion body.theme-dark .logos{animation:none}}
