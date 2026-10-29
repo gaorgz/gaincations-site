@@ -4,8 +4,6 @@ const crypto = require("crypto");
 
 const KIT_CLIENT_TAG_ID = 25094695;
 
-module.exports.config = { api: { bodyParser: false } };
-
 function readRaw(req) {
   return new Promise((resolve, reject) => {
     const chunks = [];
@@ -35,9 +33,10 @@ async function kit(path, body) {
   return r.status;
 }
 
-module.exports = async (req, res) => {
+async function handler(req, res) {
+  try {
   if (req.method !== "POST") return res.status(405).end();
-  const raw = await readRaw(req);
+  const raw = Buffer.isBuffer(req.body) ? req.body : (typeof req.body === "string" ? Buffer.from(req.body) : await readRaw(req));
   if (!verifyStripe(raw, req.headers["stripe-signature"], process.env.STRIPE_WEBHOOK_SECRET)) {
     return res.status(400).send("bad signature");
   }
@@ -59,4 +58,11 @@ module.exports = async (req, res) => {
     }
   }
   res.status(200).json({ received: true });
-};
+  } catch (e) {
+    console.error("handler crash", e);
+    res.status(500).send("crash: " + (e && e.message));
+  }
+}
+
+module.exports = handler;
+module.exports.config = { api: { bodyParser: false } };
