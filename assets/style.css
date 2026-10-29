@@ -636,3 +636,16 @@ body.theme-dark details[open] p{animation:faqIn .28s ease both}
 body.theme-dark .btn.primary.glow{animation:breathe 3.2s ease-in-out infinite}
 @keyframes breathe{0%,100%{box-shadow:0 0 0 1px rgba(225,119,20,.35),0 8px 30px rgba(225,119,20,.45),0 0 60px rgba(225,119,20,.25)}50%{box-shadow:0 0 0 1px rgba(225,119,20,.5),0 10px 36px rgba(225,119,20,.6),0 0 80px rgba(225,119,20,.38)}}
 @media (prefers-reduced-motion:reduce){body.theme-dark .rv{opacity:1;transform:none;transition:none}body.theme-dark .btn.primary.glow{animation:none}html.motion body.theme-dark .page-hero .sec-head>*,html.motion body.theme-dark .page-hero .coach-photo img,html.motion body.theme-dark .logos{animation:none}}
+
+/* coaching: background marks */
+body.theme-dark .section.results,body.theme-dark #join,body.theme-dark .promise-block,body.theme-dark .section.vacation{position:relative;overflow:hidden}
+body.theme-dark #join>.wrap,body.theme-dark .promise-block>*,body.theme-dark .section.vacation>.wrap,body.theme-dark .section.results>.wrap{position:relative;z-index:1}
+body.theme-dark #join::before{content:"";position:absolute;right:-140px;bottom:-160px;width:640px;height:640px;background:url(/assets/img/logo-mono.png) center/contain no-repeat;opacity:.07;transform:translateY(var(--drift,0)) rotate(-8deg);pointer-events:none}
+body.theme-dark .promise-block::before{content:"8";position:absolute;left:50%;top:50%;transform:translate(-50%,-54%) translateY(var(--drift,0));font-family:var(--display);font-size:420px;line-height:1;color:rgba(255,255,255,.07);pointer-events:none;z-index:0}
+body.theme-dark .section.results::before{content:"";position:absolute;left:50%;top:0;width:900px;height:420px;transform:translateX(-50%);background:radial-gradient(ellipse at center top,rgba(225,119,20,.14),rgba(225,119,20,0) 65%);pointer-events:none}
+body.theme-dark .section.vacation::after{content:"";position:absolute;right:-60px;top:-40px;width:520px;height:520px;background:url(/assets/img/palm-mono.png) center/contain no-repeat;opacity:.06;transform:translateY(var(--drift,0)) rotate(6deg);pointer-events:none}
+@media (max-width:820px){
+  body.theme-dark #join::before{width:380px;height:380px;right:-120px;bottom:-100px}
+  body.theme-dark .promise-block::before{font-size:260px}
+  body.theme-dark .section.vacation::after{width:300px;height:300px;right:-80px;top:auto;bottom:-60px}
+}
