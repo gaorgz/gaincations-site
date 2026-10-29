@@ -597,7 +597,7 @@ body.theme-dark .vac-copy .btnrow{margin-top:26px}
 
 /* coaching: client results */
 body.theme-dark .section.results{padding-top:56px}
-body.theme-dark .rnote{margin:12px auto 0;font-size:14px;color:rgba(247,247,255,.55)}
+body.theme-dark .rnote{margin:14px auto 0;max-width:560px;font-size:17px;line-height:1.5;color:rgba(247,247,255,.8)}
 body.theme-dark .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
 body.theme-dark .rcard{margin:0;background:#15171B;border:1px solid rgba(255,255,255,.08);border-radius:8px;overflow:hidden}
 body.theme-dark .rcard.more{display:none}
