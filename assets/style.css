@@ -594,3 +594,21 @@ body.theme-dark .vac-copy .btnrow{margin-top:26px}
   body.theme-dark .vac-copy p{margin:0 auto}
   body.theme-dark .vac-copy .btnrow{justify-content:center}
 }
+
+/* coaching: client results */
+body.theme-dark .section.results{padding-top:56px}
+body.theme-dark .rnote{margin:12px auto 0;font-size:14px;color:rgba(247,247,255,.55)}
+body.theme-dark .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+body.theme-dark .rcard{margin:0;background:#15171B;border:1px solid rgba(255,255,255,.08);border-radius:8px;overflow:hidden}
+body.theme-dark .rcard.more{display:none}
+body.theme-dark .rcard img{display:block;width:100%;height:auto}
+body.theme-dark .rcard figcaption{display:flex;justify-content:space-between;align-items:baseline;padding:12px 14px}
+body.theme-dark .rcard figcaption b{font-family:var(--display);font-size:22px;color:var(--accent);letter-spacing:.01em}
+body.theme-dark .rcard .who{font-size:14px;color:rgba(247,247,255,.7)}
+body.theme-dark .results .btnrow.center{margin-top:22px}
+@media (max-width:820px){
+  body.theme-dark .rgrid{grid-template-columns:1fr 1fr;gap:10px}
+  body.theme-dark .rcard figcaption{padding:10px 10px;flex-direction:column;gap:2px}
+  body.theme-dark .rcard figcaption b{font-size:18px}
+  body.theme-dark .rcard .who{font-size:12px}
+}
