@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/style.css?v=202610292100">
+<link rel="stylesheet" href="/assets/style.css?v=202610292107">
 <script defer src="/_vercel/insights/script.js"></script>
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
@@ -328,7 +328,7 @@ window.addEventListener('scroll',f,{passive:true});window.addEventListener('resi
   </div>
 </footer>
 <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
-<script src="/assets/site.js?v=202610292100"></script>
+<script src="/assets/site.js?v=202610292107"></script>
 <script>
 (function(){
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -366,25 +366,30 @@ window.addEventListener('scroll',f,{passive:true});window.addEventListener('resi
   var stage=you.querySelector('.you-stage'), label=you.querySelector('.you-label'), lines=you.querySelectorAll('.you-line'), n=lines.length, bar=you.querySelector('.you-bar i');
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(reduce){ you.classList.add('static'); return; }
-  var P1=0.18, P2=0.86, dx=0, dy=0, idx=-1, H=0;
+  var P1=0.2, P2=0.88, dx=0, dy=0, idx=-1, H=0, s0=0, lastP=0;
   function measure(){
-    var vh=window.innerHeight; H=Math.round(vh*2.6); you.style.height=H+'px';
+    var vh=window.innerHeight; H=Math.round(vh*2.4); you.style.height=H+'px';
     label.style.transform='none';
     var sr=stage.getBoundingClientRect(), lr=label.getBoundingClientRect();
-    dx=(sr.left+sr.width/2)-(lr.left+lr.width/2); dy=(sr.top+sr.height/2)-(lr.top+lr.height/2);
+    // start: horizontally centered, sitting at the top of the stage (right under the headline)
+    var startY=sr.top+Math.round(vh*0.06)+lr.height*1.35/2, startX=sr.left+sr.width/2;
+    dx=startX-(lr.left+lr.width/2); dy=startY-(lr.top+lr.height/2);
+    // phase 1 runs from the moment the stage is on screen until it pins
+    var docTop=you.getBoundingClientRect().top+window.scrollY, firstTop=docTop; // viewport top of stage at scrollY=0
+    s0=Math.max(80,Math.min(firstTop,Math.round(vh*0.78)));
+    P1=s0/(s0+H-vh);
     apply(lastP);
   }
-  var lastP=0;
   function ease(t){ return t<0?0:t>1?1:1-Math.pow(1-t,3); }
   function apply(p){
     lastP=p;
     var t=ease(p/P1), u=1-t;
     label.style.transform='translate('+(dx*u)+'px,'+(dy*u)+'px) scale('+(1+0.35*u)+')';
     you.style.setProperty('--t1',t);
-    var q=(p-P1)/(P2-P1), i=p<P1*0.45?-1:Math.max(0,Math.min(n-1,Math.floor(q*n)));
+    var q=(p-P1)/(P2-P1), i=p<P1*0.6?-1:Math.max(0,Math.min(n-1,Math.floor(q*n)));
     if(i!==idx){ idx=i; lines.forEach(function(l,k){ l.classList.toggle('is-on',k===i); l.classList.toggle('is-past',k<i); }); bar.style.width=(Math.max(0,i+1)/n*100)+'%'; }
   }
-  function tick(){ var r=you.getBoundingClientRect(), vh=window.innerHeight; var p=Math.min(1,Math.max(0,(-r.top)/(H-vh))); apply(p); }
+  function tick(){ var r=you.getBoundingClientRect(), vh=window.innerHeight; var p=Math.min(1,Math.max(0,(s0-r.top)/(s0+H-vh))); apply(p); }
   measure(); tick();
   window.addEventListener('scroll',tick,{passive:true});
   window.addEventListener('resize',function(){measure();tick();});
