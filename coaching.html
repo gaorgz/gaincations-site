@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/style.css?v=202610292039">
+<link rel="stylesheet" href="/assets/style.css?v=202610292042">
 <script defer src="/_vercel/insights/script.js"></script>
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
@@ -329,7 +329,7 @@ window.addEventListener('scroll',f,{passive:true});window.addEventListener('resi
   </div>
 </footer>
 <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
-<script src="/assets/site.js?v=202610292039"></script>
+<script src="/assets/site.js?v=202610292042"></script>
 <script>
 (function(){
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -364,18 +364,36 @@ window.addEventListener('scroll',f,{passive:true});window.addEventListener('resi
 <script>
 (function(){
   var you=document.getElementById('you'); if(!you) return;
-  var lines=you.querySelectorAll('.you-line'), n=lines.length, num=you.querySelector('.you-n'), bar=you.querySelector('.you-bar i'), cur=-1;
+  var lines=you.querySelectorAll('.you-line'), n=lines.length, bar=you.querySelector('.you-bar i'), idx=0, busy=0;
   if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  function set(i){ if(i===cur) return; cur=i;
-    lines.forEach(function(l,k){ l.classList.toggle('is-on',k===i); l.classList.toggle('is-past',k<i); });
-    num.textContent=i+1; bar.style.width=((i+1)/n*100)+'%'; }
-  var sticky=you.querySelector('.you-sticky'), dist=0;
-  function size(){ var vh=window.innerHeight, sh=sticky.offsetHeight, avail=vh-sh-24;
-    dist=avail>=240?Math.min(820,avail):Math.round(vh*0.5); you.style.height=(sh+dist)+'px'; }
-  function tick(){ var r=you.getBoundingClientRect();
-    var prog=Math.min(1,Math.max(0,(-r.top)/dist));
-    set(Math.min(n-1,Math.floor(prog*n))); }
-  size(); window.addEventListener('scroll',tick,{passive:true}); window.addEventListener('resize',function(){size();tick();}); window.addEventListener('load',function(){size();tick();}); tick();
+  function set(i){ idx=i; lines.forEach(function(l,k){ l.classList.toggle('is-on',k===i); l.classList.toggle('is-past',k<i); }); bar.style.width=((i+1)/n*100)+'%'; }
+  set(0);
+  var OFF=24, ZONE=140;
+  function zone(){ var t=you.getBoundingClientRect().top; return t<=ZONE && t>=-ZONE; }
+  function align(){ var t=you.getBoundingClientRect().top; if(Math.abs(t-OFF)>2) window.scrollBy(0,t-OFF); }
+  function step(dir){ if(busy) return true; busy=1; setTimeout(function(){busy=0},420); set(idx+dir); return true; }
+  function handle(dir){ // returns true if we consumed the scroll
+    if(!zone()) return false;
+    if(dir>0 && idx<n-1){ align(); return step(1); }
+    if(dir<0 && idx>0){ align(); return step(-1); }
+    return false;
+  }
+  var acc=0;
+  window.addEventListener('wheel',function(e){
+    if(!zone()){acc=0;return;}
+    var dir=e.deltaY>0?1:-1;
+    if((dir>0&&idx<n-1)||(dir<0&&idx>0)){ e.preventDefault(); acc+=e.deltaY; if(Math.abs(acc)>40){ handle(dir); acc=0; } }
+  },{passive:false});
+  var ty=null;
+  window.addEventListener('touchstart',function(e){ ty=e.touches[0].clientY; },{passive:true});
+  window.addEventListener('touchmove',function(e){
+    if(ty===null||!zone()) return;
+    var dy=ty-e.touches[0].clientY, dir=dy>0?1:-1;
+    if((dir>0&&idx<n-1)||(dir<0&&idx>0)){ e.preventDefault(); if(Math.abs(dy)>28){ handle(dir); ty=e.touches[0].clientY; } }
+  },{passive:false});
+  window.addEventListener('touchend',function(){ ty=null; },{passive:true});
+  // if the block is scrolled past without locking, show the last/first state
+  window.addEventListener('scroll',function(){ var t=you.getBoundingClientRect().top; if(t<-ZONE&&idx!==n-1) set(n-1); if(t>window.innerHeight&&idx!==0) set(0); },{passive:true});
 })();
 </script>
 </body>
