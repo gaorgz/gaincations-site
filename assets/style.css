@@ -723,3 +723,10 @@ body.theme-dark .section.after-hero .sec-head{padding-bottom:0;margin-bottom:0}
 body.theme-dark .section.after-hero .sec-head .h-hero{margin-bottom:0}
 
 body.theme-dark .section.after-hero{padding-bottom:0}
+
+/* promise hidden until the lines are done */
+body.theme-dark .you .promise-block{opacity:0;transform:skewX(-12deg) translateY(28px);transition:opacity .6s ease,transform .7s cubic-bezier(.2,.7,.2,1);pointer-events:none}
+body.theme-dark .you.is-done .promise-block{opacity:1;transform:skewX(-12deg) translateY(0);pointer-events:auto}
+body.theme-dark .you-sticky{align-content:start}
+@media (max-width:900px){body.theme-dark .you.is-done .promise-block{transform:skewX(-4deg) translateY(0)}body.theme-dark .you .promise-block{transform:skewX(-4deg) translateY(28px)}}
+@media (prefers-reduced-motion:reduce){body.theme-dark .you .promise-block{opacity:1;transform:skewX(-12deg)}}

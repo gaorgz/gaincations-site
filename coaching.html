@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/style.css?v=202610292042">
+<link rel="stylesheet" href="/assets/style.css?v=202610292047">
 <script defer src="/_vercel/insights/script.js"></script>
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
@@ -329,11 +329,11 @@ window.addEventListener('scroll',f,{passive:true});window.addEventListener('resi
   </div>
 </footer>
 <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
-<script src="/assets/site.js?v=202610292042"></script>
+<script src="/assets/site.js?v=202610292047"></script>
 <script>
 (function(){
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var els=Array.prototype.filter.call(document.querySelectorAll('.section:not(.page-hero) .sec-head, .section:not(.page-hero) .card, .skew-cards, .rcard, .promise-block, .rnote, .price-card, .vac-photo, .vac-copy, .band .wrap, details, .results .btnrow, .handled-photo, .handled-list li'),function(e){return !e.closest('.skew-cards')||e.classList.contains('skew-cards')});
+  var els=Array.prototype.filter.call(document.querySelectorAll('.section:not(.page-hero) .sec-head, .section:not(.page-hero) .card, .skew-cards, .rcard, .rnote, .price-card, .vac-photo, .vac-copy, .band .wrap, details, .results .btnrow, .handled-photo, .handled-list li'),function(e){return !e.closest('.skew-cards')||e.classList.contains('skew-cards')});
   els.forEach(function(e){e.classList.add('rv')});
   if(reduce||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
   var io=new IntersectionObserver(function(entries){
@@ -366,10 +366,12 @@ window.addEventListener('scroll',f,{passive:true});window.addEventListener('resi
   var you=document.getElementById('you'); if(!you) return;
   var lines=you.querySelectorAll('.you-line'), n=lines.length, bar=you.querySelector('.you-bar i'), idx=0, busy=0;
   if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  function set(i){ idx=i; lines.forEach(function(l,k){ l.classList.toggle('is-on',k===i); l.classList.toggle('is-past',k<i); }); bar.style.width=((i+1)/n*100)+'%'; }
+  function set(i){ idx=i; lines.forEach(function(l,k){ l.classList.toggle('is-on',k===i); l.classList.toggle('is-past',k<i); }); bar.style.width=((i+1)/n*100)+'%'; if(i===n-1) you.classList.add('is-done'); }
   set(0);
-  var OFF=24, ZONE=140;
-  function zone(){ var t=you.getBoundingClientRect().top; return t<=ZONE && t>=-ZONE; }
+  var OFF=0, ZONE=160;
+  function size(){ var vh=window.innerHeight; OFF=Math.round(vh*(window.innerWidth>900?0.26:0.14)); you.style.minHeight=(vh-OFF)+'px'; }
+  size(); window.addEventListener('resize',size);
+  function zone(){ var t=you.getBoundingClientRect().top-OFF; return t<=ZONE && t>=-ZONE; }
   function align(){ var t=you.getBoundingClientRect().top; if(Math.abs(t-OFF)>2) window.scrollBy(0,t-OFF); }
   function step(dir){ if(busy) return true; busy=1; setTimeout(function(){busy=0},420); set(idx+dir); return true; }
   function handle(dir){ // returns true if we consumed the scroll
@@ -393,7 +395,7 @@ window.addEventListener('scroll',f,{passive:true});window.addEventListener('resi
   },{passive:false});
   window.addEventListener('touchend',function(){ ty=null; },{passive:true});
   // if the block is scrolled past without locking, show the last/first state
-  window.addEventListener('scroll',function(){ var t=you.getBoundingClientRect().top; if(t<-ZONE&&idx!==n-1) set(n-1); if(t>window.innerHeight&&idx!==0) set(0); },{passive:true});
+  window.addEventListener('scroll',function(){ var t=you.getBoundingClientRect().top-OFF; if(t<-ZONE&&idx!==n-1) set(n-1); },{passive:true});
 })();
 </script>
 </body>
