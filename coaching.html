@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/style.css?v=202610292024">
+<link rel="stylesheet" href="/assets/style.css?v=202610292029">
 <script defer src="/_vercel/insights/script.js"></script>
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
@@ -71,12 +71,23 @@ posthog.init('phc_C28JrHMEpH7d9g8dcuLgvfjdZ2WqwZE8aeRjLSCBrC3R',{api_host:'https
   <div class="wrap">
     <div class="sec-head">
       <h2 class="h-hero h-caption wrap"><span class="en">Visible by week 8. Undeniable by week 12.</span><span class="es">Se nota en la semana 8. Innegable en la 12.</span></h2>
-      <div class="eyebrow below"><span class="en">This is you if</span><span class="es">Esto es para ti si</span></div>
     </div>
-    <div class="grid c2 who">
-      <div class="card"><h3><span class="en">Tired of wasting time and money.</span><span class="es">Cansado de perder tiempo y dinero.</span></h3><p><span class="en">Months in the gym, a membership every month, and nothing to show for it. And you can't tell what's wrong.</span><span class="es">Meses en el gym, una membresía cada mes, y nada que mostrar. Y no sabes qué está mal.</span></p></div>
-
-      <div class="card"><h3><span class="en">You want to do it natural.</span><span class="es">Quieres hacerlo natural.</span></h3><p><span class="en">Half of what you're learning online comes from people who are on something. Their rules don't work on a natural body, and nobody told you.</span><span class="es">La mitad de lo que aprendes en línea viene de gente que está en algo. Sus reglas no funcionan en un cuerpo natural, y nadie te lo dijo.</span></p></div>
+    <div class="you" id="you">
+      <div class="you-sticky">
+        <div class="you-left">
+          <div class="eyebrow"><span class="en">This is you if</span><span class="es">Esto es para ti si</span></div>
+          <div class="you-count"><span class="you-n">1</span><span class="you-of">/6</span></div>
+          <div class="you-bar"><i></i></div>
+        </div>
+        <div class="you-right">
+          <p class="you-line is-on"><span class="en">You've paid for programs before and have nothing to show for it.</span><span class="es">Ya pagaste programas antes y no tienes nada que mostrar.</span></p>
+          <p class="you-line"><span class="en">You train, or you're ready to, and the mirror still isn't moving.</span><span class="es">Entrenas, o estás listo para hacerlo, y el espejo sigue sin moverse.</span></p>
+          <p class="you-line"><span class="en">You're done starting over every January.</span><span class="es">Ya te cansaste de empezar de cero cada enero.</span></p>
+          <p class="you-line"><span class="en">You want to do it natural. No gear, no crash diets, no 900-calorie weeks.</span><span class="es">Quieres hacerlo natural. Sin sustancias, sin dietas extremas, sin semanas de 900 calorías.</span></p>
+          <p class="you-line"><span class="en">You have a real job and a real life and need this to fit around both.</span><span class="es">Tienes un trabajo real y una vida real y necesitas que esto quepa en las dos.</span></p>
+          <p class="you-line"><span class="en">You want a body you can see, not just a number that went down.</span><span class="es">Quieres un cuerpo que se vea, no solo un número que bajó.</span></p>
+        </div>
+      </div>
     </div>
     <div class="promise-block">
       <div class="eyebrow"><span class="en">Why it works this time</span><span class="es">Por qué esta vez sí funciona</span></div>
@@ -318,7 +329,7 @@ window.addEventListener('scroll',f,{passive:true});window.addEventListener('resi
   </div>
 </footer>
 <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
-<script src="/assets/site.js?v=202610292024"></script>
+<script src="/assets/site.js?v=202610292029"></script>
 <script>
 (function(){
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -347,6 +358,21 @@ window.addEventListener('scroll',f,{passive:true});window.addEventListener('resi
   function drift(){var vh=window.innerHeight;drifters.forEach(function(el){var r=el.getBoundingClientRect();var k=(r.top+r.height/2-vh/2)/vh;el.style.setProperty('--drift',(k*-40).toFixed(1)+'px');});}
   if(!reduce){window.addEventListener('scroll',drift,{passive:true});window.addEventListener('resize',drift);drift();}
   document.documentElement.classList.add('motion');
+})();
+</script>
+
+<script>
+(function(){
+  var you=document.getElementById('you'); if(!you) return;
+  var lines=you.querySelectorAll('.you-line'), n=lines.length, num=you.querySelector('.you-n'), bar=you.querySelector('.you-bar i'), cur=-1;
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  function set(i){ if(i===cur) return; cur=i;
+    lines.forEach(function(l,k){ l.classList.toggle('is-on',k===i); l.classList.toggle('is-past',k<i); });
+    num.textContent=i+1; bar.style.width=((i+1)/n*100)+'%'; }
+  function tick(){ var r=you.getBoundingClientRect(), vh=window.innerHeight;
+    var total=r.height-vh, prog=Math.min(1,Math.max(0,(-r.top)/total));
+    set(Math.min(n-1,Math.floor(prog*n))); }
+  window.addEventListener('scroll',tick,{passive:true}); window.addEventListener('resize',tick); tick();
 })();
 </script>
 </body>
