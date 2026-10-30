@@ -659,19 +659,31 @@ body.theme-dark .section.vacation::after{content:"";position:absolute;right:-60p
   body.theme-dark .section.vacation::after{width:300px;height:300px;right:-80px;top:auto;bottom:-60px}
 }
 
-/* Everything handled: coach photo + tiles */
-body.theme-dark .handled{display:grid;grid-template-columns:.78fr 1.22fr;gap:36px;align-items:center;margin-top:8px}
+/* Everything handled: circle photo + open numbered list */
+body.theme-dark .handled{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;margin-top:8px}
 body.theme-dark .handled-photo{margin:0;position:relative}
-body.theme-dark .handled-photo::before{content:"";position:absolute;left:50%;bottom:6%;width:92%;height:70%;transform:translateX(-50%);background:radial-gradient(ellipse at center,rgba(225,119,20,.22),transparent 68%);filter:blur(10px);pointer-events:none}
-body.theme-dark .handled-photo img{display:block;width:100%;max-width:440px;height:auto;margin:0 auto;position:relative}
-body.theme-dark .handled-tiles{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-body.theme-dark .tile{background:#15171B;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:22px 22px 20px;position:relative;overflow:hidden;transition:transform .25s ease,border-color .25s ease}
-body.theme-dark .tile::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent);transform:skewY(-12deg) scaleY(1.3)}
-body.theme-dark .tile b{display:block;color:#F7F7FF;font-size:17px;line-height:1.25;margin-bottom:8px}
-body.theme-dark .tile p{margin:0;color:rgba(247,247,255,.72);font-size:15px;line-height:1.5}
-body.theme-dark .tile:hover{transform:translateY(-3px);border-color:rgba(225,119,20,.45)}
+body.theme-dark .handled-photo::before{content:"";position:absolute;left:50%;top:56%;width:86%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(225,119,20,.28),transparent 70%);filter:blur(28px);pointer-events:none}
+body.theme-dark .handled-photo img{display:block;width:100%;max-width:460px;height:auto;margin:0 auto;position:relative}
+body.theme-dark .handled-list{list-style:none;margin:0;padding:0;counter-reset:hl;display:grid;gap:6px}
+body.theme-dark .handled-list li{counter-increment:hl;position:relative;padding:22px 0 22px 86px;border-bottom:1px solid rgba(255,255,255,.08)}
+body.theme-dark .handled-list li:last-child{border-bottom:0}
+body.theme-dark .handled-list li::before{content:"0" counter(hl);position:absolute;left:0;top:8px;font-family:var(--display,inherit);font-size:64px;line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(225,119,20,.55);letter-spacing:-.02em}
+body.theme-dark .handled-list b{display:block;color:#F7F7FF;font-size:19px;line-height:1.25;margin-bottom:6px}
+body.theme-dark .handled-list p{margin:0;color:rgba(247,247,255,.7);font-size:15.5px;line-height:1.5}
+body.theme-dark .handled-list li.rv{opacity:0;transform:translate(-120px,60px) rotate(-6deg);transition:opacity .7s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+body.theme-dark .handled-list li.rv:nth-child(2){transform:translate(-140px,20px) rotate(-4deg)}
+body.theme-dark .handled-list li.rv:nth-child(3){transform:translate(-140px,-20px) rotate(4deg)}
+body.theme-dark .handled-list li.rv:nth-child(4){transform:translate(-120px,-60px) rotate(6deg)}
+body.theme-dark .handled-list li.rv.in{opacity:1;transform:none}
+body.theme-dark .handled-list li.rv:nth-child(2).in{transition-delay:.12s}
+body.theme-dark .handled-list li.rv:nth-child(3).in{transition-delay:.24s}
+body.theme-dark .handled-list li.rv:nth-child(4).in{transition-delay:.36s}
+body.theme-dark .handled-photo.rv{opacity:0;transform:scale(.92)}
+body.theme-dark .handled-photo.rv.in{opacity:1;transform:none;transition:opacity .8s ease,transform .9s ease}
+@media (prefers-reduced-motion:reduce){body.theme-dark .handled-list li.rv,body.theme-dark .handled-photo.rv{opacity:1;transform:none}}
 @media (max-width:900px){
-  body.theme-dark .handled{grid-template-columns:1fr;gap:10px}
-  body.theme-dark .handled-photo img{max-width:300px}
-  body.theme-dark .handled-tiles{grid-template-columns:1fr}
+  body.theme-dark .handled{grid-template-columns:1fr;gap:12px}
+  body.theme-dark .handled-photo img{max-width:320px}
+  body.theme-dark .handled-list li{padding-left:66px}
+  body.theme-dark .handled-list li::before{font-size:48px}
 }
