@@ -688,7 +688,7 @@ body.theme-dark .you{position:relative;margin:0}
 body.theme-dark .you-stage{position:sticky;top:0;height:100vh;display:grid;grid-template-rows:auto 1fr auto;align-items:center;padding:4vh 0 4vh;box-sizing:border-box}
 body.theme-dark .you-head{align-self:start}
 body.theme-dark .you-foot{align-self:end}
-body.theme-dark .you-head .sec-head{padding:0;margin:0}
+body.theme-dark .you-head .sec-head{padding:0;margin:0 auto}
 body.theme-dark .you-head .h-hero{margin:0;transform-origin:top center;transition:filter .5s ease,opacity .5s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
 body.theme-dark .you.is-live .you-head .h-hero{filter:blur(4px);opacity:.38;transform:translateY(-1vh) scale(.8)}
 body.theme-dark .you.is-done .you-head .h-hero{transform:translateY(2vh) scale(.86)}
